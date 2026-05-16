@@ -5,16 +5,20 @@ import { MapPin } from "lucide-react";
 export const FAQAndServiceAreas = () => {
   const faqs = [
     {
-      question: "Do you service commercial ovens?",
-      answer: "Yes, we repair commercial ovens, fryers, and all cooking equipment."
+      question: "Do you require vaccination records?",
+      answer: "Yes, for the safety of all pets in our salon, we require proof of current Rabies, Distemper/Parvo, and Bordetella vaccinations before any grooming services."
     },
     {
-      question: "What areas do you serve?",
-      answer: "We serve Houston, Katy, Sugar Land, Pearland, The Woodlands, and Pasadena."
+      question: "How long does a grooming appointment take?",
+      answer: "A typical full groom takes between 2 to 4 hours depending on the breed, size, coat condition, and temperament of your dog. We will give you a call or text when they are ready for pickup."
     },
     {
-      question: "Do you offer maintenance plans?",
-      answer: "Yes, preventative maintenance is available to keep your equipment running."
+      question: "Can I stay with my dog during the grooming?",
+      answer: "For safety reasons and to keep the dogs calm, we ask that owners do not stay in the grooming area. Dogs are usually much more cooperative and relaxed when their owners are not present."
+    },
+    {
+      question: "Do you groom large breeds or difficult dogs?",
+      answer: "Yes! We welcome dogs of all sizes and breeds. Please let us know in advance if your dog has any behavioral issues or anxieties so we can schedule appropriate time and staff."
     }
   ];
 
@@ -47,9 +51,9 @@ export const FAQAndServiceAreas = () => {
           {/* Image Right */}
           <div className="relative rounded-lg overflow-hidden h-[400px] lg:h-[450px]">
             <img 
-              src="https://vibe.filesafe.space/1778436264577951505/attachments/a4a881a6-2b74-4ee1-bed7-e7b3008b86d9.png" 
-              alt="Tri Refrigeration Services" 
-              className="object-cover w-full h-full absolute inset-0"
+              src="https://vibe.filesafe.space/1777030353190232844/attachments/4c20168e-1dfe-4e87-9b61-ff620aec6c7d.png" 
+              alt="Happy dog being held" 
+              className="object-contain w-full h-full absolute inset-0"
             />
           </div>
         </div>
@@ -58,9 +62,9 @@ export const FAQAndServiceAreas = () => {
         <div className="pt-10 mt-10 border-t border-white/10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Map */}
-            <div className="bg-black border border-white/10 rounded-lg shadow-2xl aspect-square md:aspect-[4/3] relative overflow-hidden">
+            <div className="bg-zinc-950 border border-zinc-800 rounded-lg shadow-2xl aspect-square md:aspect-[4/3] relative overflow-hidden">
               <iframe 
-                src="https://maps.google.com/maps?q=4610%20Cashel%20Glen%20Dr,%20Houston,%20TX%2077069&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.2977755869623!2d-73.7744318845957!3d40.66736207933618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c266a2f32724f7%3A0xc3f8e5f1f9ec33f4!2s166-09%20144th%20Ave%2C%20Jamaica%2C%20NY%2011434!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
@@ -75,20 +79,18 @@ export const FAQAndServiceAreas = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter text-white">
-                  WHERE TO FIND US
+                  PROUDLY SERVING THESE AREAS
                 </h2>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
-                  "Houston, TX",
-                  "Katy, TX",
-                  "Sugar Land, TX",
-                  "Pearland, TX",
-                  "The Woodlands, TX",
-                  "Pasadena, TX"
+                  "Queens, NY",
+                  "Brooklyn, NY",
+                  "Manhattan, NY",
+                  "New York (Statewide)"
                 ].map((area, index) => (
-                  <div key={index} className="flex items-center gap-3 bg-black p-4 rounded-lg border border-white/10 shadow-sm text-white">
+                  <div key={index} className="flex items-center gap-3 bg-zinc-950 p-4 rounded-lg border border-zinc-800 shadow-sm text-white">
                     <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                       <MapPin className="w-5 h-5 text-primary" />
                     </div>

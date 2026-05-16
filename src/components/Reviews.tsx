@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Star, ArrowRight } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
-export const Reviews = ({ topWaveColor = "black" }: { topWaveColor?: "black" | "white" }) => {
+export const Reviews = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://link.msgsndr.com/js/form_embed.js";
@@ -18,51 +18,26 @@ export const Reviews = ({ topWaveColor = "black" }: { topWaveColor?: "black" | "
   }, []);
 
   return (
-    <section className="relative pt-32 pb-32 md:pt-48 md:pb-48 bg-card overflow-hidden border-b border-border/40">
+<section className="relative py-8 bg-card overflow-hidden border-b border-border/40">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url("https://vibe.filesafe.space/1778436264577951505/attachments/71f05754-1b7c-496a-97d5-7de6b8943cf9.png")' }}
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20"
+        style={{ backgroundImage: 'url("https://vibe.filesafe.space/1777030353190232844/assets/5dbd1929-8c4c-454f-b006-fd4679ef0067.png")' }}
       >
-      </div>
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 z-0 bg-black/50"></div>
-
-      {/* Top Wave */}
-      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none z-10 rotate-180">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-[100px] md:h-[180px]">
-          <path d="M0 120 L0 60 C 150 -20 250 140 450 70 C 650 0 750 120 900 80 C 1050 40 1150 20 1200 50 L 1200 120 Z" className={topWaveColor === "white" ? "fill-white" : "fill-black"}></path>
-        </svg>
-      </div>
-
-      {/* Bottom Wave */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-[100px] md:h-[180px]">
-          <path d="M0 120 L0 60 C 150 -20 250 140 450 70 C 650 0 750 120 900 80 C 1050 40 1150 20 1200 50 L 1200 120 Z" className="fill-black"></path>
-        </svg>
       </div>
 
       <div className="w-full max-w-[1200px] mx-auto px-[12px] relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
-          <div className="flex-grow w-full md:w-auto">
-            <div className="inline-block bg-black px-4 py-1.5 mb-4 border border-white/10">
-              <span className="text-white text-[10px] md:text-xs font-black uppercase tracking-[0.2em]">
-                DISCOVER WHAT OUR CUSTOMERS HAVE TO SAY ABOUT US
-              </span>
-            </div>
-            <div className="flex items-center gap-6">
-              <h2 className="text-5xl md:text-6xl font-black uppercase tracking-tighter text-white leading-none">
-                Reviews
-              </h2>
-              <div className="flex-grow h-[2px] bg-primary mt-2"></div>
-            </div>
+        <div className="flex flex-col md:flex-row justify-between items-end mb-6 gap-4">
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter">
+              Reviews
+            </h2>
+            <div className="w-24 h-1 bg-primary mt-4"></div>
           </div>
-          <div className="flex-shrink-0 mb-1">
-            <Button variant="outline" className="font-bold uppercase tracking-wider bg-white text-black hover:bg-gray-200 border-0 h-12 px-6 py-2 text-sm flex items-center gap-2 shadow-xl">
-              Contact Us Now
-              <ArrowRight className="w-4 h-4 text-primary" />
-            </Button>
-          </div>
+          <Button variant="outline" className="font-bold uppercase tracking-wider bg-white text-black hover:bg-gray-200 border-0 h-9 px-4 py-2 text-sm flex items-center gap-2">
+            Contact Us Now
+            <ArrowRight className="w-4 h-4 text-primary" />
+          </Button>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -75,10 +50,10 @@ export const Reviews = ({ topWaveColor = "black" }: { topWaveColor?: "black" | "
               </div>
             </div>
             <p className="text-sm text-gray-700 mb-4 leading-snug">
-              "Tri Refrigeration saved our restaurant's walk-in cooler on a Friday night. Fast, professional, and knew exactly what to do."
+              "They did an amazing job with my golden retriever! He came out smelling fantastic, perfectly trimmed, and so happy. The staff is incredibly gentle and caring."
             </p>
             <div className="flex items-center justify-between mt-auto">
-              <span className="font-bold text-sm">Jordan M.</span>
+              <span className="font-bold text-sm">Finn Russell</span>
               <img src="https://storage.googleapis.com/revex-reputation-production/assets/google-icon.svg" alt="Google" className="w-5 h-5" />
             </div>
           </div>
@@ -92,10 +67,10 @@ export const Reviews = ({ topWaveColor = "black" }: { topWaveColor?: "black" | "
               </div>
             </div>
             <p className="text-sm text-gray-700 mb-4 leading-snug">
-              "We rely on them for all our supermarket refrigeration maintenance. Highly recommend their preventative plans."
+              "My rescue dog is usually terrified of the groomer, but the team here was so patient and sweet with her. She looks beautiful and wasn't stressed at all!"
             </p>
             <div className="flex items-center justify-between mt-auto">
-              <span className="font-bold text-sm">Dana K.</span>
+              <span className="font-bold text-sm">Sarah Jenkins</span>
               <img src="https://storage.googleapis.com/revex-reputation-production/assets/google-icon.svg" alt="Google" className="w-5 h-5" />
             </div>
           </div>
@@ -109,10 +84,11 @@ export const Reviews = ({ topWaveColor = "black" }: { topWaveColor?: "black" | "
               </div>
             </div>
             <p className="text-sm text-gray-700 mb-4 leading-snug">
-              "Fixed our commercial oven in no time. Great communication and fair pricing."
+              "Best grooming salon in town. They always listen to exactly how I want my poodle cut, and their blueberry facial leaves him smelling great for weeks."
             </p>
             <div className="flex items-center justify-between mt-auto">
-              <span className="font-bold text-sm">Chris B.</span>
+              <span className="font-bold text-sm">Michael Thompson</span>
+              <img src="https://storage.googleapis.com/revex-reputation-production/assets/google-icon.svg" alt="Google" className="w-5 h-5" />
             </div>
           </div>
         </div>
@@ -131,10 +107,10 @@ export const Reviews = ({ topWaveColor = "black" }: { topWaveColor?: "black" | "
               </DialogTrigger>
               <DialogContent className="sm:max-w-[600px] p-0 bg-transparent border-none shadow-none">
                 <iframe 
-                  src="https://api.leadconnectorhq.com/widget/survey/S7cNKNChxMYfpTUIAXdf" 
+                  src="https://api.leadconnectorhq.com/widget/survey/bVJmpV7IwCk5H0Trl0UN" 
                   style={{ border: "none", width: "100%", height: "600px" }} 
                   scrolling="no" 
-                  id="S7cNKNChxMYfpTUIAXdf" 
+                  id="bVJmpV7IwCk5H0Trl0UN" 
                   title="survey"
                 />
               </DialogContent>

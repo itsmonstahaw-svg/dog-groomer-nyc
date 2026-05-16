@@ -6,13 +6,11 @@ import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 import { FloatingQuoteButton } from "@/components/FloatingQuoteButton";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
-import { X } from "lucide-react";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { QuoteForm } from "@/components/QuoteForm";
+import { useEffect } from "react";
 
-const ServiceResidentialRefrigeration = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
+const ServicePetGrooming = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -25,23 +23,43 @@ const ServiceResidentialRefrigeration = () => {
         <section className="relative w-full min-h-[100vh] flex items-center justify-center text-center pt-32 pb-12 overflow-hidden">
           <div 
             className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: 'url("https://vibe.filesafe.space/1778436264577951505/attachments/bae4b4f5-17dc-4e41-a45e-97b195687224.png")' }}
+            style={{ backgroundImage: 'url("https://vibe.filesafe.space/1777030353190232844/attachments/b368c911-7f25-4632-acad-64db52f092c2.png")' }}
           >
             <div className="absolute inset-0 bg-black/60"></div>
           </div>
 
           <div className="w-full max-w-[1000px] mx-auto px-[12px] relative z-20 space-y-6 text-white">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase leading-[1.1] tracking-tight [text-shadow:_0_2px_10px_rgba(0,0,0,0.5)]">
-              RESIDENTIAL REFRIGERATION
+              Pet Grooming
             </h1>
             <p className="text-xl md:text-2xl font-medium max-w-3xl mx-auto text-gray-200 [text-shadow:_0_1px_5px_rgba(0,0,0,0.5)]">
-              Professional repair and maintenance for residential refrigerators and freezers in the Houston area.
+              Professional grooming tailored to your dog's breed, coat, and personality. We keep them clean, comfortable, and looking their best.
             </p>
             
             <div className="pt-8">
-              <Button size="lg" onClick={() => setIsModalOpen(true)} className="h-16 px-12 bg-primary hover:bg-primary/90 text-primary-foreground font-black text-xl uppercase tracking-wider rounded-sm shadow-2xl">
-                Get Free Quote
-              </Button>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button size="lg" className="h-16 px-12 bg-primary hover:bg-primary/90 text-primary-foreground font-black text-xl uppercase tracking-wider rounded-sm shadow-2xl">
+                    Get Free Quote
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="bg-black border border-white/10 p-6 sm:p-8 rounded-lg shadow-2xl max-w-md w-[95vw] sm:w-full [&>button]:text-white [&>button]:opacity-100 [&>button:hover]:opacity-80">
+                  <div className="flex justify-center -mb-2">
+                    <img 
+                      src="https://vibe.filesafe.space/1777030353190232844/attachments/c896108d-a195-4a99-9db4-723af21b2087.png" 
+                      alt="NYC Hearts of Love Pet Care" 
+                      className="h-32 w-auto object-contain"
+                    />
+                  </div>
+                  <DialogTitle className="text-3xl font-black uppercase text-center text-white mb-0 tracking-tight">
+                    Get A Free Quote
+                  </DialogTitle>
+                  <DialogDescription className="text-center text-gray-400 mb-6">
+                    Fill out the form below and we'll get back to you shortly.
+                  </DialogDescription>
+                  <QuoteForm />
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
 
@@ -56,7 +74,7 @@ const ServiceResidentialRefrigeration = () => {
             >
               <path
                 d="M0 120 L0 60 C 150 -20 250 140 450 70 C 650 0 750 120 900 80 C 1050 40 1150 20 1200 50 L 1200 120 Z"
-                className="fill-white"
+                className="fill-background"
               />
             </svg>
           </div>
@@ -65,71 +83,58 @@ const ServiceResidentialRefrigeration = () => {
         {/* About This Service Section */}
         <section className="py-16 md:py-24 bg-white text-black">
           <div className="w-full max-w-[1200px] mx-auto px-[12px]">
-            <div className="max-w-3xl mx-auto space-y-10 text-lg text-zinc-800 text-left mb-16">
-              <div>
-                <h3 className="text-2xl font-bold text-black mb-3">Residential Refrigeration Repair</h3>
+            <div className="max-w-4xl mx-auto space-y-12 text-lg text-zinc-800 text-left mb-16">
+              <div className="space-y-4">
+                <h3 className="text-2xl font-black uppercase tracking-tight text-primary">What Is Pet Grooming?</h3>
                 <p className="leading-relaxed">
-                  A broken refrigerator can disrupt your entire household and lead to costly food spoilage. We bring our commercial-grade expertise directly to your home, offering fast, reliable repair services for all major residential refrigerator and freezer brands. Whether your fridge isn't cooling properly, is making strange noises, or has a faulty ice maker, our experienced technicians diagnose the problem quickly and accurately to get your kitchen back to normal.
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="text-2xl font-bold text-black mb-3">Why Choose Us for Your Home?</h3>
-                <p className="leading-relaxed">
-                  We are a fully insured, owner-operated business that values honesty, transparency, and doing the job right the first time. Unlike standard appliance repair services, our deep background in heavy-duty commercial refrigeration means we understand the intricate mechanics of cooling systems better than anyone. We treat your home with respect, offer transparent pricing without hidden fees, and stand behind the quality of our work.
+                  Pet grooming at Heart Of Love Pet Care is a professional, high-end spa experience designed to keep the dogs of Queens and New York City looking and feeling their absolute best. We understand that every dog is unique, and our grooming in Queens is tailored to your pet's specific breed standards, coat type, and individual personality. Heart Of Love Pet Care provides a full range of services, from deep-cleansing baths and breed-specific haircuts to nail trimming, ear cleaning, and more. We use only premium, pet-safe products that are gentle on the skin and coat, ensuring a luxurious experience for every guest in our NYC facility. Our owner-operated approach at Heart Of Love Pet Care means that your dog receives personalized attention and compassionate handling, making the grooming process a positive and stress-free experience. Whether you're in Astoria, Long Island City, or anywhere in New York City, Heart Of Love Pet Care is your destination for expert pet grooming. We take pride in our attention to detail, ensuring that every dog leaves our Jamaica, Queens location feeling refreshed and revitalized.
                 </p>
               </div>
 
-              <div>
-                <h3 className="text-2xl font-bold text-black mb-3">Preventative Maintenance for Your Fridge</h3>
+              <div className="space-y-4">
+                <h3 className="text-2xl font-black uppercase tracking-tight text-primary">Why Is Pet Grooming Important?</h3>
                 <p className="leading-relaxed">
-                  Just like commercial systems, high-end residential refrigerators benefit greatly from routine maintenance. We offer preventative services that include cleaning condenser coils, checking door seals, and ensuring your compressor is running efficiently. Proper maintenance not only extends the lifespan of your appliance but also helps keep your energy bills low. Trust us to keep your family's food safe and your refrigerator running at peak performance.
+                  For dog owners in Queens / New York City, regular professional grooming is essential for maintaining your pet's overall health and well-being. Heart Of Love Pet Care believes that grooming is far more than just a cosmetic service; it is a vital part of preventative healthcare for NYC dogs. By choosing Heart Of Love Pet Care, you are ensuring that your pet's skin and coat are regularly checked for any issues, such as mats, parasites, or abnormalities that can easily go unnoticed. Our grooming in Queens helps reduce shedding and prevents the painful matting that can occur in many breeds, especially in the variable weather of New York City. Heart Of Love Pet Care focuses on the comfort and health of your pet, providing a thorough cleaning that removes the city grime and allergens that can accumulate on their fur. We are dedicated to providing the highest quality grooming services to keep your NYC dog healthy, happy, and smelling great year-round. Regular visits to Heart Of Love Pet Care in Queens can significantly improve your pet's quality of life.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-2xl font-black uppercase tracking-tight text-primary">When Should You Consider Pet Grooming?</h3>
+                <p className="leading-relaxed">
+                  You should consider pet grooming with Heart Of Love Pet Care whenever your dog's coat begins to lose its shine, if you notice excessive shedding in your Queens home, or if their nails are becoming uncomfortably long. Regular grooming sessions at Heart Of Love Pet Care should be a part of every NYC dog's routine, with the frequency depending on their breed and lifestyle in New York City. If your pet has been spending time in the parks of Queens or walking the streets of NYC, a deep-cleansing bath at Heart Of Love Pet Care is the perfect way to refresh them. Many of our Queens clients book grooming services before special events or simply when they want to treat their furry friend to a day of pampering. Heart Of Love Pet Care is ready to provide the expert care your pet deserves. If you want your dog to look their best in New York City, don't wait to book your appointment. Shoot us a message today or click Get Free Quote to see how Heart Of Love Pet Care can transform your pet's appearance. Our Jamaica, Queens team is excited to meet you and your pet.
                 </p>
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <img 
-                src="https://vibe.filesafe.space/1778436264577951505/attachments/50840071-8c3e-49d7-887f-4d816e97ce81.png" 
-                alt="Service image 1" 
+                src="https://vibe.filesafe.space/1777030353190232844/attachments/3c584b5d-4a51-41f5-9329-9478309dff52.png" 
+                alt="Dog getting washed" 
                 className="w-full h-64 object-cover rounded-lg shadow-md border border-border"
               />
               <img 
-                src="https://vibe.filesafe.space/1778436264577951505/attachments/dbce6618-f302-4f7b-b169-680309246b07.png" 
-                alt="Service image 2" 
+                src="https://vibe.filesafe.space/1777030353190232844/attachments/c16bce43-a9cf-4496-b801-f97d13c6cf6f.png" 
+                alt="Dog getting brushed" 
                 className="w-full h-64 object-cover rounded-lg shadow-md border border-border"
               />
               <img 
-                src="https://vibe.filesafe.space/1778436264577951505/attachments/d10284c9-b899-433c-bb20-32ae6a9a7c38.png" 
-                alt="Service image 3" 
+                src="https://vibe.filesafe.space/1777030353190232844/attachments/fec95bf5-97e3-409e-bb6b-fb9ae4d88332.png" 
+                alt="Happy groomed dog" 
                 className="w-full h-64 object-cover rounded-lg shadow-md border border-border"
               />
             </div>
           </div>
         </section>
 
-        <Reviews topWaveColor="white" />
+        <Reviews />
         <Process />
         <ServiceAreas />
         <CTA />
       </main>
       <Footer />
       <FloatingQuoteButton />
-      {isModalOpen && (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
-          <div className="absolute inset-0 bg-black/70" onClick={() => setIsModalOpen(false)} />
-          <div className="relative bg-black border border-white/10 p-6 sm:p-8 rounded-lg shadow-2xl max-w-md w-full">
-            <button onClick={() => setIsModalOpen(false)} className="absolute top-4 right-4 text-white opacity-70 hover:opacity-100 transition-opacity">
-              <X className="w-5 h-5" />
-            </button>
-            <h2 className="text-3xl font-black uppercase text-center text-white mb-2 tracking-tight">Get A Free Quote</h2>
-            <p className="text-center text-gray-400 mb-6">Fill out the form below and we'll get back to you shortly.</p>
-            <QuoteForm />
-          </div>
-        </div>
-      )}
     </div>
   );
 };
 
-export default ServiceResidentialRefrigeration;
+export default ServicePetGrooming;

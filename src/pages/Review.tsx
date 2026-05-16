@@ -33,10 +33,10 @@ const Review = () => {
           
           <div className="bg-card rounded-xl p-4 md:p-8 shadow-sm border border-border">
             <iframe 
-              src="https://api.leadconnectorhq.com/widget/survey/S7cNKNChxMYfpTUIAXdf" 
+              src="https://api.leadconnectorhq.com/widget/survey/bVJmpV7IwCk5H0Trl0UN" 
               style={{ border: "none", width: "100%", height: "600px", borderRadius: "10px" }} 
               scrolling="no" 
-              id="S7cNKNChxMYfpTUIAXdf" 
+              id="bVJmpV7IwCk5H0Trl0UN" 
               title="survey"
             />
           </div>

@@ -1,4 +1,4 @@
-import { Facebook, Instagram, MapPin, Users, Clock, ShieldCheck, Heart, Home, ShoppingBag } from "lucide-react";
+import { Facebook, Instagram, MapPin, Users, Clock, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 
 const GoogleIcon = ({ className }: { className?: string }) => (
@@ -14,11 +14,11 @@ export const About = () => {
         {/* Top Stats */}
         <div className="flex flex-wrap justify-center gap-x-6 md:gap-x-10 gap-y-6 mb-12 border-b border-border/40 pb-12">
           {[
-            { text: "100% Guaranteed", icon: ShieldCheck },
-            { text: "Commercial & Residential", icon: Home },
-            { text: "Fully Insured", icon: ShieldCheck },
-            { text: "Based in Houston TX", icon: MapPin },
-            { text: "Overtime Available", icon: Clock }
+            { text: "100% Local", icon: MapPin },
+            { text: "Family Business", icon: Users },
+            { text: "10+ Years Experience", icon: Clock },
+            { text: "Licensed", icon: ShieldCheck },
+            { text: "Fully Insured", icon: ShieldCheck }
           ].map((stat, i) => (
             <motion.div 
               key={i}
@@ -40,27 +40,34 @@ export const About = () => {
             <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter">About Us</h2>
             <div className="w-24 h-1 bg-primary"></div>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Tri Refrigeration & HVAC is a trusted provider of commercial and residential HVAC and refrigeration services in Houston, TX and the surrounding metro areas. We specialize in walk-in coolers, freezers, commercial ovens, and air conditioning for supermarkets, restaurants, businesses, and homes. Fully insured and dedicated to keeping your operations running smoothly.
+              We started with a passion for pets and a commitment to their well-being. Today, we're Jamaica's go-to team for professional pet boarding and training, giving every dog a safe, comfortable, and loving environment while you're away.
             </p>
             <div className="flex gap-4 pt-4">
-              <a href="https://www.facebook.com/Tripointrefrigeration/" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="https://www.instagram.com/TriHVACHouston" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
+              <a 
+                href="https://www.instagram.com/heartoflovepetcare/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://g.page/r/CZoh3-NW4MDcEAE/review" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
+              <a 
+                href="https://www.google.com/search?q=Heart+Of+Love+pet+care+nyc&sca_esv=43a6c5a008a39361&rlz=1C1GCEA_enGB1195GB1195&biw=1600&bih=789&sxsrf=ANbL-n68SAshHIX2IKrvYuExCcdNQLbh5A%3A1778522960455&ei=UBsCasO6G9_ThbIPvNKN8QM&ved=0ahUKEwjDoqGq6rGUAxXfaUEAHTxpIz4Q4dUDCBE&uact=5&oq=Heart+Of+Love+pet+care+nyc&gs_lp=Egxnd3Mtd2l6LXNlcnAiGkhlYXJ0IE9mIExvdmUgcGV0IGNhcmUgbnljMgUQIRifBTIFECEYnwVIkg9Q7gdY7AtwAXgBkAEAmAFzoAGjA6oBAzEuM7gBA8gBAPgBAZgCBaACsgPCAgcQIxiwAxgnwgIKEAAYRxjWBBiwA8ICBBAjGCfCAgUQABiABMICBhAAGBYYHsICCxAAGIAEGIoFGIYDwgIFECEYoAHCAgQQIRgVmAMAiAYBkAYKkgcDMi4zoAe2ELIHAzEuM7gHrwPCBwMwLjXIBwiACAE&sclient=gws-wiz-serp" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+              >
                 <GoogleIcon className="w-5 h-5" />
               </a>
             </div>
           </div>
           
           <div className="relative">
-            <div className="overflow-hidden rounded-lg">
+            <div className="aspect-square md:aspect-video lg:aspect-square overflow-hidden rounded-lg">
               <img 
-                src="https://vibe.filesafe.space/1778436264577951505/attachments/11e141a0-5e2d-46f4-a8e0-15fddf4d91db.png" 
-                alt="Tri Refrigeration & HVAC Team" 
-                className="w-full h-auto object-cover"
+                src="https://vibe.filesafe.space/1777030353190232844/attachments/3bea918c-8188-4e51-98d0-c7bb44a51652.png" 
+                alt="About us" 
+                className="w-full h-full object-cover"
               />
             </div>
             {/* Decorative element */}

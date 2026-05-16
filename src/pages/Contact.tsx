@@ -19,7 +19,7 @@ const Contact = () => {
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage:
-              'url("https://vibe.filesafe.space/1778436264577951505/attachments/bae4b4f5-17dc-4e41-a45e-97b195687224.png")',
+              'url("https://vibe.filesafe.space/1777030353190232844/attachments/b368c911-7f25-4632-acad-64db52f092c2.png")',
           }}
         >
           <div className="absolute inset-0 bg-black/60" />
@@ -36,7 +36,7 @@ const Contact = () => {
           >
             <path
               d="M0 120 L0 60 C 150 -20 250 140 450 70 C 650 0 750 120 900 80 C 1050 40 1150 20 1200 50 L 1200 120 Z"
-              className="fill-white"
+              className="fill-background"
             />
           </svg>
         </div>
@@ -92,16 +92,16 @@ const Contact = () => {
                   asChild 
                   className="w-full h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-black text-lg uppercase tracking-wider rounded-sm"
                 >
-                  <a href="mailto:trivietpy@gmail.com">
-                    EMAIL: trivietpy@gmail.com
+                  <a href="mailto:HEARTOFLOVEPETCARE@GMAIL.COM">
+                    EMAIL: HEARTOFLOVEPETCARE@GMAIL.COM
                   </a>
                 </Button>
                 <Button 
                   asChild 
                   className="w-full h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-black text-lg uppercase tracking-wider rounded-sm"
                 >
-                  <a href="tel:+17139097745">
-                    PHONE: (713) 909-7745
+                  <a href="tel:+16469259123">
+                    PHONE: (646) 925-9123
                   </a>
                 </Button>
               </div>
@@ -109,14 +109,14 @@ const Contact = () => {
 
             {/* Right side */}
             <div className="bg-black p-6 md:p-8 rounded-lg shadow-2xl border border-white/10 max-w-md mx-auto w-full">
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center -mb-2">
                 <img 
-                  src="https://vibe.filesafe.space/1778436264577951505/attachments/1a1d7288-f458-45eb-9f31-db5f96aae826.png" 
-                  alt="Tri Refrigeration & HVAC Logo" 
-                  className="h-16 w-auto object-contain mix-blend-lighten"
+                  src="https://vibe.filesafe.space/1777030353190232844/attachments/c896108d-a195-4a99-9db4-723af21b2087.png" 
+                  alt="NYC Hearts of Love Pet Care" 
+                  className="h-32 w-auto object-contain"
                 />
               </div>
-              <h3 className="text-2xl md:text-3xl font-black uppercase text-white mb-6 text-center tracking-tight">
+              <h3 className="text-2xl md:text-3xl font-black uppercase text-white mt-0 mb-6 text-center tracking-tight">
                 GET A FREE QUOTE
               </h3>
               <QuoteForm />
@@ -127,7 +127,7 @@ const Contact = () => {
       </section>
 
       <main>
-        <Reviews topWaveColor="white" />
+        <Reviews />
         <Process />
         <ServiceAreas />
         <CTA />

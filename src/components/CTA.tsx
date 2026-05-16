@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 export const CTA = () => {
   return (
     <section className="relative py-32 md:py-48 flex items-center justify-center text-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url("https://vibe.filesafe.space/1778436264577951505/attachments/ca8b6994-e5cc-4984-9c9c-83a4359702ee.png")' }}
+        style={{ backgroundImage: 'url("https://vibe.filesafe.space/1777030353190232844/assets/c4bd417e-d04a-4c8a-8cb3-a45643b8cb21.png")' }}
       >
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
       {/* Top Wave */}
@@ -27,10 +27,10 @@ export const CTA = () => {
 
       <div className="w-full max-w-[1200px] mx-auto px-[12px] relative z-20 space-y-4 text-white">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase leading-[1.1] tracking-tight [text-shadow:_0_2px_10px_rgba(0,0,0,0.5)]">
-          READY TO TAKE THE NEXT STEP?
+          Ready to take the next step?
         </h2>
         <h3 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase text-white tracking-tighter [text-shadow:_0_2px_10px_rgba(0,0,0,0.5)]">
-          GET A FREE QUOTE TODAY!
+          Get a free quote today!
         </h3>
         
         <div className="pt-8">

@@ -10,18 +10,22 @@ import { QuoteForm } from "@/components/QuoteForm";
 
 const Gallery = () => {
   const gridImages = [
-    "https://vibe.filesafe.space/1778436264577951505/attachments/44b5245f-5e7a-4ac8-af4a-6516d74fd711.png",
-    "https://vibe.filesafe.space/1778436264577951505/attachments/50840071-8c3e-49d7-887f-4d816e97ce81.png",
-    "https://vibe.filesafe.space/1778436264577951505/attachments/dbce6618-f302-4f7b-b169-680309246b07.png",
-    "https://vibe.filesafe.space/1778436264577951505/attachments/d10284c9-b899-433c-bb20-32ae6a9a7c38.png",
-    "https://vibe.filesafe.space/1778436264577951505/attachments/87d1531c-4c8e-498b-911e-ffd1599ecfc4.png",
-    "https://vibe.filesafe.space/1778436264577951505/attachments/a7d4c1c6-fc20-4dab-a693-7a1c9bf920bc.png",
-    "https://vibe.filesafe.space/1778436264577951505/attachments/313af329-52b1-4bd0-bdb5-18478eb1317f.png",
-    "https://vibe.filesafe.space/1778436264577951505/attachments/a7a3f002-ccd7-4930-b9d0-04bc341451b7.png",
-    "https://vibe.filesafe.space/1778436264577951505/attachments/213dc09f-031a-4c61-8f33-03d704f6f4f1.png",
-    "https://vibe.filesafe.space/1778436264577951505/attachments/c1c15a3d-62b3-40cf-b980-e4e2fa0a3729.png",
-    "https://vibe.filesafe.space/1778436264577951505/attachments/78d39b14-86b7-460b-86d1-6b81c1530112.png",
-    "https://vibe.filesafe.space/1778436264577951505/attachments/78c2a408-8dee-43c4-af45-04dac0229bb8.png"
+    "https://vibe.filesafe.space/1777030353190232844/attachments/3c584b5d-4a51-41f5-9329-9478309dff52.png",
+    "https://vibe.filesafe.space/1777030353190232844/attachments/c16bce43-a9cf-4496-b801-f97d13c6cf6f.png",
+    "https://vibe.filesafe.space/1777030353190232844/attachments/fec95bf5-97e3-409e-bb6b-fb9ae4d88332.png",
+    "https://vibe.filesafe.space/1777030353190232844/attachments/11eed622-c248-43b3-90cd-22a6a793ff7a.png",
+    "https://vibe.filesafe.space/1777030353190232844/attachments/8ff84408-4ab9-4039-a467-73df907d890f.png",
+    "https://vibe.filesafe.space/1777030353190232844/attachments/494622de-c0b5-40cb-a8f1-5e25fb0a8c3c.png",
+    "https://vibe.filesafe.space/1777030353190232844/attachments/2945c0b4-1ff0-4798-a563-9ccd86920434.png",
+    "https://vibe.filesafe.space/1777030353190232844/attachments/0f446e67-1cf2-4bf7-b5f5-6fdbec831afe.png",
+    "https://vibe.filesafe.space/1777030353190232844/attachments/922e6561-45b7-4671-9430-0c012eba99e2.png",
+    "https://vibe.filesafe.space/1777030353190232844/attachments/1b0dc273-bfbd-41ff-887e-921631f0a656.png",
+    "https://vibe.filesafe.space/1777030353190232844/attachments/c8d426d4-fd41-4902-b01c-983af1ce9137.png",
+    "https://vibe.filesafe.space/1777030353190232844/attachments/d668750a-2ddd-4914-b27b-cdb2254c329f.png",
+    "https://vibe.filesafe.space/1777030353190232844/attachments/5c5de5be-ad2a-4598-b7ed-6084e83162ee.png",
+    "https://vibe.filesafe.space/1777030353190232844/attachments/18fca5e5-280d-450d-a972-f5826c1a1a48.png",
+    "https://vibe.filesafe.space/1777030353190232844/attachments/a6e6fbb8-3f83-470a-9496-f6749dcb17a9.png",
+    "https://vibe.filesafe.space/1777030353190232844/attachments/41fd54f8-09cc-4f02-b5e5-eb13ca24e1bd.png"
   ];
 
   return (
@@ -32,7 +36,7 @@ const Gallery = () => {
         <section className="relative w-full h-screen min-h-[600px] flex items-center justify-center pt-20">
           <div 
             className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: 'url("https://vibe.filesafe.space/1778436264577951505/attachments/bae4b4f5-17dc-4e41-a45e-97b195687224.png")' }}
+            style={{ backgroundImage: 'url("https://vibe.filesafe.space/1777030353190232844/attachments/b368c911-7f25-4632-acad-64db52f092c2.png")' }}
           >
             <div className="absolute inset-0 bg-black/60"></div>
           </div>
@@ -51,7 +55,14 @@ const Gallery = () => {
                 </Button>
               </DialogTrigger>
               <DialogContent className="bg-black border border-white/10 p-6 sm:p-8 rounded-lg shadow-2xl max-w-md w-[95vw] sm:w-full [&>button]:text-white [&>button]:opacity-100 [&>button:hover]:opacity-80">
-                <DialogTitle className="text-3xl font-black uppercase text-center text-white mb-2 tracking-tight">
+                <div className="flex justify-center -mb-2">
+                  <img 
+                    src="https://vibe.filesafe.space/1777030353190232844/attachments/c896108d-a195-4a99-9db4-723af21b2087.png" 
+                    alt="NYC Hearts of Love Pet Care" 
+                    className="h-32 w-auto object-contain"
+                  />
+                </div>
+                <DialogTitle className="text-3xl font-black uppercase text-center text-white mb-0 tracking-tight">
                   Get A Free Quote
                 </DialogTitle>
                 <DialogDescription className="text-center text-gray-400 mb-6">
@@ -65,32 +76,32 @@ const Gallery = () => {
           {/* Bottom wave */}
           <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
             <svg
-              data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1200 120"
+              viewBox="0 0 1440 320"
               preserveAspectRatio="none"
               className="relative block w-full h-[80px] md:h-[120px]"
             >
               <path
-                d="M0 120 L0 60 C 150 -20 250 140 450 70 C 650 0 750 120 900 80 C 1050 40 1150 20 1200 50 L 1200 120 Z"
-                className="fill-background"
+                fill="currentColor"
+                className="text-black"
+                d="M0,160L48,170.7C96,181,192,203,288,197.3C384,192,480,160,576,149.3C672,139,768,149,864,170.7C960,192,1056,224,1152,218.7C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
               />
             </svg>
           </div>
         </section>
 
         {/* Photo Grid Section */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="w-full max-w-[1200px] mx-auto px-0">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
+        <section className="py-16 md:py-24 bg-white">
+          <div className="w-full max-w-[1200px] mx-auto px-4 md:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
               {gridImages.map((src, index) => (
-                <div key={index} className="aspect-square overflow-hidden relative group">
+                <div key={index} className="aspect-[4/3] overflow-hidden rounded-md relative group bg-zinc-900">
                   <img 
                     src={src} 
                     alt={`Gallery image ${index + 1}`} 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                   />
-
+                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300"></div>
                 </div>
               ))}
             </div>
