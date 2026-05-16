@@ -1,112 +1,91 @@
-import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { Scissors, Home, Dumbbell, Footprints, Dog, Baby } from "lucide-react";
+
+const services = [
+  {
+    icon: Scissors,
+    title: "Pet Grooming",
+    description:
+      "Full-service grooming including breed-specific cuts, deep-cleansing baths, nail trims, ear cleaning, and gland expression. Every dog leaves looking and smelling their best.",
+    href: "/services/pet-grooming",
+  },
+  {
+    icon: Home,
+    title: "Home Boarding",
+    description:
+      "Your dog stays in a real home — not a cage. We maintain their routine, provide one-on-one attention, and send you regular photo updates while you're away.",
+    href: "/services/home-boarding",
+  },
+  {
+    icon: Dog,
+    title: "Pet Boarding",
+    description:
+      "Safe, supervised boarding for dogs of all sizes and temperaments. A secure, loving environment that feels like a home away from home in Queens, NYC.",
+    href: "/services/pet-boarding",
+  },
+  {
+    icon: Dumbbell,
+    title: "Training & Behaviour",
+    description:
+      "Positive-reinforcement training tailored to NYC life — leash manners, apartment etiquette, separation anxiety, basic obedience, and behavior modification.",
+    href: "/services/training-behaviour",
+  },
+  {
+    icon: Baby,
+    title: "Potty Training",
+    description:
+      "Structured, science-based potty training programs for puppies and adult dogs. We build consistent routines that work in the real world of New York City.",
+    href: "/services/potty-training",
+  },
+  {
+    icon: Footprints,
+    title: "Dog Walking",
+    description:
+      "Reliable daily walks by experienced, caring handlers who know the Queens streets. Solo or small-group walks available — your dog's schedule, your way.",
+    href: "/services/dog-walking",
+  },
+];
 
 export const Services = () => {
-  const services = [
-    {
-      title: "HVAC & Air Conditioning",
-      description: "Commercial and residential rooftop and split system air conditioning installation, repair, and maintenance.",
-      image: "https://vibe.filesafe.space/1778436264577951505/attachments/57caaa70-e41c-4d13-a151-8330eda00cbd.png",
-      href: "/services/hvac-air-conditioning"
-    },
-    {
-      title: "Commercial Refrigeration",
-      description: "Expert service for all types of commercial refrigeration systems in supermarkets and restaurants.",
-      image: "https://vibe.filesafe.space/1778436264577951505/attachments/961f0fae-7331-4e1c-824e-9808381932c0.png",
-      href: "/services/commercial-refrigeration"
-    },
-    {
-      title: "Residential Refrigeration",
-      description: "Professional repair and maintenance for residential refrigerators and freezers.",
-      image: "https://vibe.filesafe.space/1778436264577951505/attachments/c332c992-ec32-461f-ac83-88ee576cfc17.png",
-      href: "/services/residential-refrigeration"
-    },
-    {
-      title: "Walk-in Coolers & Freezers",
-      description: "Installation and repair of commercial and residential walk-in coolers and freezers to keep your inventory safe.",
-      image: "https://vibe.filesafe.space/1778436264577951505/attachments/dc92bb99-1383-4df7-981d-f24b6c8a9221.png",
-      href: "/services/walk-in-coolers"
-    },
-    {
-      title: "Restaurant Equipment Repair & Maintenance",
-      description: "Fast and reliable repair services for commercial ovens, fryers, and cooking equipment.",
-      image: "https://vibe.filesafe.space/1778436264577951505/attachments/ea931fb0-2115-4e56-915f-633d726fa9c2.png",
-      href: "/services/restaurant-equipment"
-    },
-    {
-      title: "Ice Machine & EMS Systems",
-      description: "Professional installation and maintenance of commercial and residential ice machines and EMS systems.",
-      image: "https://vibe.filesafe.space/1778436264577951505/attachments/a0457b28-7b66-4954-b91b-435f5fd9388d.png",
-      href: "/services/ice-machine-ems"
-    }
-  ];
-
   return (
-    <section id="services" className="py-12 bg-background border-b border-border/40">
+    <section id="services" className="py-20 bg-background border-b border-border/40">
       <div className="w-full max-w-[1200px] mx-auto px-[12px]">
-        <div className="flex flex-col md:flex-row md:items-end gap-4 mb-12">
-          <div className="flex-shrink-0">
-            <p className="text-sm font-bold tracking-widest text-white/70 uppercase mb-2">
-              WHAT WE ARE BEST AT
-            </p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter">
-              OUR SERVICES
-            </h2>
-          </div>
-          <div className="flex-grow h-[2px] bg-primary mb-2 md:mb-4 hidden md:block"></div>
+        <div className="text-center mb-16 space-y-4">
+          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter">
+            Our Services
+          </h2>
+          <div className="w-24 h-1 bg-primary mx-auto mt-6"></div>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto pt-4">
+            Professional pet care built for NYC life — owner-operated, personal, and passionate about every dog we work with.
+          </p>
         </div>
 
-        <motion.div 
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-[2px] bg-black border-[2px] border-black"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={{
-            hidden: {},
-            visible: {
-              transition: {
-                staggerChildren: 0.1
-              }
-            }
-          }}
-        >
-          {services.map((service, index) => (
-            <motion.a 
-              key={index} 
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, i) => (
+            <motion.a
+              key={i}
               href={service.href}
-              variants={{
-                hidden: { opacity: 0, y: 40 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
-              }}
-              className="group relative block overflow-hidden aspect-square sm:aspect-[4/3] lg:aspect-[4/3] bg-black"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              className="group flex flex-col gap-4 p-7 rounded-lg border border-border bg-card hover:border-primary hover:shadow-lg transition-all duration-300"
             >
-              <img 
-                src={service.image} 
-                alt={service.title} 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-30"
-              />
-              
-              {/* Overlay Description */}
-              <div className="absolute inset-0 flex flex-col justify-center p-8 z-10 pointer-events-none">
-                <div className="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75">
-                  <p className="text-white text-lg font-medium leading-relaxed text-center drop-shadow-md">
-                    {service.description}
-                  </p>
-                </div>
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                <service.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
               </div>
-              
-              {/* Title Badge */}
-              <div className="absolute bottom-6 left-6 z-20 transition-transform duration-500 group-hover:-translate-y-2">
-                <div className="bg-black text-white px-4 py-2.5 text-sm sm:text-base font-black uppercase tracking-wide flex items-center gap-2 shadow-xl rounded-sm">
-                  {service.title}
-                  <div className="bg-primary text-primary-foreground rounded-full p-0.5 ml-1">
-                    <ArrowRight className="w-4 h-4" />
-                  </div>
-                </div>
-              </div>
+              <h3 className="text-lg font-black uppercase tracking-tight">
+                {service.title}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed flex-grow">
+                {service.description}
+              </p>
+              <span className="text-sm font-black uppercase tracking-wider text-primary group-hover:text-primary/80 transition-colors flex items-center gap-1">
+                Learn More →
+              </span>
             </motion.a>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
