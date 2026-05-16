@@ -12,18 +12,7 @@ import ClientSubmit from '@/pages/ClientSubmit'
 import Contact from '@/pages/Contact'
 import Discount from '@/pages/Discount'
 import Gallery from '@/pages/Gallery'
-import LocationHoustonTX from '@/pages/LocationHoustonTX'
-import LocationKatyTX from '@/pages/LocationKatyTX'
-import LocationPearlandTX from '@/pages/LocationPearlandTX'
-import LocationSugarLandTX from '@/pages/LocationSugarLandTX'
-import LocationTheWoodlandsTX from '@/pages/LocationTheWoodlandsTX'
 import Review from '@/pages/Review'
-import ServiceCommercialRefrigeration from '@/pages/ServiceCommercialRefrigeration'
-import ServiceHVACAirConditioning from '@/pages/ServiceHVACAirConditioning'
-import ServiceIceMachineEMS from '@/pages/ServiceIceMachineEMS'
-import ServiceResidentialRefrigeration from '@/pages/ServiceResidentialRefrigeration'
-import ServiceRestaurantEquipment from '@/pages/ServiceRestaurantEquipment'
-import ServiceWalkInCoolers from '@/pages/ServiceWalkInCoolers'
 import ThankYou from '@/pages/ThankYou'
 import PrivacyPolicy from '@/pages/PrivacyPolicy'
 import Terms from '@/pages/Terms'
@@ -33,21 +22,6 @@ function App() {
     <Routes>
       <Route path="/" element={<Index />} />
       <Route path="/home" element={<Index />} />
-
-      {/* Services */}
-      <Route path="/services/hvac-air-conditioning" element={<ServiceHVACAirConditioning />} />
-      <Route path="/services/commercial-refrigeration" element={<ServiceCommercialRefrigeration />} />
-      <Route path="/services/residential-refrigeration" element={<ServiceResidentialRefrigeration />} />
-      <Route path="/services/walk-in-coolers" element={<ServiceWalkInCoolers />} />
-      <Route path="/services/restaurant-equipment" element={<ServiceRestaurantEquipment />} />
-      <Route path="/services/ice-machine-ems" element={<ServiceIceMachineEMS />} />
-
-      {/* Locations */}
-      <Route path="/locations/houston-tx" element={<LocationHoustonTX />} />
-      <Route path="/locations/katy-tx" element={<LocationKatyTX />} />
-      <Route path="/locations/sugar-land-tx" element={<LocationSugarLandTX />} />
-      <Route path="/locations/pearland-tx" element={<LocationPearlandTX />} />
-      <Route path="/locations/the-woodlands-tx" element={<LocationTheWoodlandsTX />} />
 
       {/* Blog */}
       <Route path="/blog" element={<Blog />} />
