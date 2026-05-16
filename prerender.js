@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const BASE_URL = 'https://heartoflovepetcare.com'
+const BASE_URL = 'https://nycheartsoflovepetcare.com'
 
 const routesMeta = {
   '/': {
