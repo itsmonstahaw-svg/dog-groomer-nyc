@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FloatingQuoteButton } from "@/components/FloatingQuoteButton";
@@ -8,11 +10,10 @@ const BlogPost3 = () => {
     <div className="min-h-screen bg-background text-foreground flex flex-col font-sans">
       <Navbar />
       <main className="flex-grow">
-        {/* Hero Section */}
         <section className="relative w-full min-h-[60vh] flex items-center justify-center text-center pt-32 pb-24 overflow-hidden">
-          <div 
+          <div
             className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: 'url("https://vibe.filesafe.space/1778436264577951505/attachments/bae4b4f5-17dc-4e41-a45e-97b195687224.png")' }}
+            style={{ backgroundImage: 'url("https://vibe.filesafe.space/1777030353190232844/attachments/b368c911-7f25-4632-acad-64db52f092c2.png")' }}
           >
             <div className="absolute inset-0 bg-black/65"></div>
           </div>
@@ -22,55 +23,40 @@ const BlogPost3 = () => {
               BLOG
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase leading-[1.1] tracking-tight text-primary [text-shadow:_0_2px_10px_rgba(0,0,0,0.5)]">
-              Commercial & Residential HVAC Maintenance: Why Houston Businesses And Homeowners Can't Afford To Skip It | Tri Refrigeration & HVAC
+              WHY REGULAR GROOMING IS ESSENTIAL FOR YOUR DOG'S HEALTH
             </h1>
           </div>
 
-          {/* Bottom wave */}
           <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
-            <svg
-              data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1200 120"
-              preserveAspectRatio="none"
-              className="relative block w-full h-[80px] md:h-[120px]"
-            >
-              <path
-                d="M0 120 L0 60 C 150 -20 250 140 450 70 C 650 0 750 120 900 80 C 1050 40 1150 20 1200 50 L 1200 120 Z"
-                className="fill-white"
-              />
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-[80px] md:h-[120px]">
+              <path d="M0 120 L0 60 C 150 -20 250 140 450 70 C 650 0 750 120 900 80 C 1050 40 1150 20 1200 50 L 1200 120 Z" className="fill-white" />
             </svg>
           </div>
         </section>
 
-        {/* Body Content */}
         <section className="py-16 bg-white text-black">
           <div className="px-4 max-w-[800px] mx-auto w-full">
+            <Link to="/blog" className="inline-flex items-center gap-2 mb-10 font-bold uppercase tracking-wider text-sm text-black hover:text-primary transition-colors">
+              <ArrowLeft className="h-4 w-4" />
+              Back to Blog
+            </Link>
+
             <div className="prose prose-lg max-w-none text-zinc-800 space-y-6 leading-relaxed">
-          <p>
-            In Houston, air conditioning isn't a luxury; it's an absolute necessity. The brutal summer heat and oppressive humidity place an immense strain on both commercial and residential HVAC systems. For business owners, ensuring the comfort of customers and employees is critical to daily operations. For homeowners, a functioning AC is vital for safety and comfort. Yet, many people treat HVAC maintenance as an optional expense, waiting until a system completely fails before calling a technician. This reactive approach is a costly mistake that Houston businesses and homeowners simply cannot afford.
-          </p>
-          <p>
-            At Tri Refrigeration & HVAC, we've seen firsthand the damage caused by neglected maintenance. Our founder, Tri Nung, spent years working on massive commercial refrigeration and HVAC systems at the supermarket level. In those high-demand commercial environments, preventative maintenance isn't just a good idea—it's mandatory to prevent catastrophic financial losses. Tri took that high-level expertise and went independent, founding Tri Refrigeration & HVAC to bring supermarket-level skill directly to Houston businesses and residential clients. As a small, owner-operated, fully insured company, we are dedicated to doing the job right and keeping your systems running flawlessly.
-          </p>
-          <p>
-            The true cost of an unexpected HVAC failure goes far beyond the repair bill. When your AC goes out in the middle of a Houston July, the impact on your business is immediate. Customers will quickly leave a sweltering store or restaurant, resulting in lost sales. Employee productivity plummets, and you may be forced to close your doors entirely until repairs are made. For homeowners, a broken AC means sleepless nights and potential health risks for vulnerable family members. The financial and personal losses from a single breakdown often exceed the cost of an entire year of preventative maintenance.
-          </p>
-          <p>
-            Preventative maintenance is the key to avoiding these catastrophic failures. During a routine maintenance visit from Tri Refrigeration & HVAC, our qualified technicians will inspect, clean, and tune up your entire system. We check refrigerant levels, calibrate thermostats, inspect electrical connections, and clean dirty condenser and evaporator coils. This proactive approach catches minor issues—like a worn belt or a failing capacitor—before they turn into major, expensive breakdowns.
-          </p>
-          <p>
-            Furthermore, regular maintenance significantly improves the energy efficiency of your HVAC system. A system clogged with dirt and struggling with low refrigerant has to work much harder to cool your building or home, driving up your monthly utility bills. In a large commercial space, these inefficiencies add up quickly. By keeping your equipment running at peak performance, preventative maintenance from Tri Refrigeration & HVAC pays for itself through lower energy costs month after month.
-          </p>
-          <p>
-            Tri Refrigeration & HVAC understands the unique demands placed on cooling systems in the Houston area. We offer comprehensive maintenance plans tailored to the specific needs of your business or home. Whether we are servicing a complex rooftop unit for a commercial property owner or a central AC system for a residential homeowner, we apply the same rigorous standards. We work around your schedule to minimize disruption to your operations or daily life.
-          </p>
-          <p>
-            Don't wait for the Houston heat to expose the weaknesses in your HVAC system. Investing in regular maintenance extends the lifespan of your expensive equipment, lowers your energy bills, and provides peace of mind knowing your property will stay cool and comfortable year-round. Trust the experts at Tri Refrigeration & HVAC to protect your investment.
-          </p>
-          <p className="font-bold text-xl pt-8">
-            Protect your property from unexpected breakdowns. Call Tri Refrigeration & HVAC today at (713) 909-7745 or request a free quote to set up a customized HVAC maintenance plan!
-          </p>
+              <p>Many pet owners view grooming as an aesthetic choice—a way to make their dog look "pretty." However, at Heart Of Love Pet Care in Queens, NY, we know that regular grooming is a fundamental pillar of your dog's overall health and wellbeing. As a small, owner-operated business, we take a holistic view of pet care, and our grooming sessions are designed to be as much about health as they are about style. We treat every dog like family—not a number—and that means looking out for their long-term health in every session we provide in the heart of New York City.</p>
+              <p>Living in New York City presents unique challenges for a dog's hygiene. The city's streets can be harsh on paws, and the pollution can dull a coat over time. Regular grooming at Heart Of Love Pet Care helps to remove the accumulated dirt, allergens, and debris that your dog picks up during their daily NYC adventures. This is especially important for dogs living in bustling areas of Queens, where seasonal changes can also lead to excessive shedding and skin irritation. Our expert groomers understand the local NYC environment and how it affects your pet's skin and coat, providing targeted care that addresses these specific issues.</p>
+              <p>Our brand story is one of dedication and love. We started Heart Of Love Pet Care because we saw a need for more personalized, compassionate pet care in New York. In our Queens salon, we use only the best pet-safe products to ensure your dog's skin remains healthy and hydrated. One of the most critical aspects of regular grooming is the prevention of matting. When a dog's fur mats, it can pull on the skin, causing pain and creating a breeding ground for bacteria and parasites. Our team is trained to identify and safely handle these issues, ensuring your pet remains comfortable and healthy.</p>
+              <p>Beyond the coat, our grooming sessions include essential care for ears, nails, and teeth. Overgrown nails can lead to joint pain and difficulty walking, while neglected ears can quickly develop painful infections. By bringing your dog to Heart Of Love Pet Care regularly, you ensure that these areas are consistently monitored and maintained by professionals who truly care. We take the time to perform a thorough "nose-to-tail" check during every session, spotting potential health concerns such as lumps, skin tags, or early signs of dental disease before they become serious problems.</p>
+              <p>In the high-stress environment of New York City, your dog deserves a grooming experience that is relaxing and positive. We pride ourselves on our gentle handling and patient approach, making sure even the most anxious dogs feel safe in our care. Our Queens location is a sanctuary where your pet receives the undivided attention they deserve. We believe that this personalized, owner-operated approach is what sets us apart from the larger, more impersonal franchises in NYC.</p>
+              <p>Furthermore, regular grooming sessions are an excellent way to maintain your dog's comfort during the changing seasons in New York. From the humid summers to the freezing winters, your dog's coat needs change, and our experts at Heart Of Love Pet Care are here to provide the appropriate care. We offer de-shedding treatments, moisturizing baths, and protective paw care to ensure your pet is ready for whatever the NYC weather throws at them.</p>
+              <p>At Heart Of Love Pet Care, we are committed to the health and happiness of every dog in our community. Regular grooming is an investment in your pet's quality of life and longevity. We invite you to experience the Heart Of Love difference and see how our expert care can transform your dog's health and appearance. Your furry friend is part of our family, and we are here to support them through every stage of their life in New York.</p>
+
+              <div className="mt-12 p-8 bg-primary/5 rounded-xl border-2 border-primary/20 text-center">
+                <h4 className="text-2xl font-black uppercase mb-4">Is it time for a refresh?</h4>
+                <p className="mb-6">Schedule a grooming session today and give your dog the health-focused care they deserve.</p>
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
+                  <a href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-black uppercase rounded-sm hover:bg-primary/90 transition-colors">Shoot Us A Message</a>
+                </div>
+              </div>
             </div>
           </div>
         </section>

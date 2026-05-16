@@ -4,126 +4,126 @@ import { fileURLToPath } from 'node:url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const BASE_URL = 'https://trirefrigerationhvac.com'
+const BASE_URL = 'https://heartoflovepetcare.com'
 
 const routesMeta = {
   '/': {
-    title: 'Tri Refrigeration & HVAC | Houston, TX',
-    description: 'Expert commercial & residential HVAC, refrigeration, walk-in coolers, and restaurant equipment repair in Houston, TX. Fully insured. Call (713) 909-7745.',
+    title: 'Heart Of Love Pet Care | Dog Grooming, Boarding & Training in Queens, NY',
+    description: 'Expert dog grooming, home boarding, and training in Queens, NY. Small, owner-operated pet care that treats every dog like family. Book your appointment today.',
   },
   '/home': {
-    title: 'Tri Refrigeration & HVAC | Houston, TX',
-    description: 'Expert commercial & residential HVAC, refrigeration, walk-in coolers, and restaurant equipment repair in Houston, TX. Fully insured. Call (713) 909-7745.',
+    title: 'Heart Of Love Pet Care | Dog Grooming, Boarding & Training in Queens, NY',
+    description: 'Expert dog grooming, home boarding, and training in Queens, NY. Small, owner-operated pet care that treats every dog like family. Book your appointment today.',
   },
   '/services/commercial-refrigeration': {
-    title: 'Commercial Refrigeration Repair Houston TX | Tri Refrigeration & HVAC',
-    description: 'Expert commercial refrigeration repair, maintenance & installation for Houston TX restaurants and supermarkets. Walk-in coolers, freezers & display cases. Call (713) 909-7745.',
+    title: 'Dog Grooming Queens NY | Heart Of Love Pet Care',
+    description: 'Professional dog grooming in Queens, NY. Breed-specific cuts, baths, nail trims & more. Owner-operated salon treating every dog like family.',
   },
   '/services/hvac-air-conditioning': {
-    title: 'HVAC & Air Conditioning Houston TX | Tri Refrigeration & HVAC',
-    description: 'Commercial & residential HVAC installation, repair & maintenance in Houston TX. Rooftop units, split systems & more. Fully insured. Call (713) 909-7745.',
+    title: 'Pet Boarding Queens NY | Heart Of Love Pet Care',
+    description: 'Safe, loving home boarding for dogs in Queens, NY. No cages — just a warm home environment. Book your dog\'s stay with Heart Of Love Pet Care.',
   },
   '/services/ice-machine-ems': {
-    title: 'Ice Machine Repair & EMS Systems Houston TX | Tri Refrigeration & HVAC',
-    description: 'Commercial ice machine repair, installation & sanitation in Houston TX. Fast response, fully insured. Call (713) 909-7745.',
+    title: 'Dog Training Queens NY | Heart Of Love Pet Care',
+    description: 'Positive reinforcement dog training in Queens, NY. From puppy basics to behaviour modification. Personalized sessions with Heart Of Love Pet Care.',
   },
   '/services/residential-refrigeration': {
-    title: 'Residential Refrigeration Repair Houston TX | Tri Refrigeration & HVAC',
-    description: 'Professional home refrigerator & freezer repair in Houston TX. Fast, reliable, fully insured. Call (713) 909-7745.',
+    title: 'Dog Walking Queens NY | Heart Of Love Pet Care',
+    description: 'Reliable dog walking services in Queens, NY. Experienced, caring walkers who treat your dog like family. Book with Heart Of Love Pet Care.',
   },
   '/services/restaurant-equipment': {
-    title: 'Restaurant Equipment Repair Houston TX | Tri Refrigeration & HVAC',
-    description: 'Commercial restaurant equipment repair & maintenance in Houston TX. Ovens, fryers, coolers & more. Minimise downtime. Call (713) 909-7745.',
+    title: 'Puppy Care Queens NY | Heart Of Love Pet Care',
+    description: 'Specialised puppy care, socialisation, and training in Queens, NY. Give your new pup the best start with Heart Of Love Pet Care.',
   },
   '/services/walk-in-coolers': {
-    title: 'Walk-In Cooler & Freezer Repair Houston TX | Tri Refrigeration & HVAC',
-    description: 'Walk-in cooler & freezer repair, installation & maintenance in Houston TX. Overtime available. Fully insured. Call (713) 909-7745.',
+    title: 'Senior Dog Care Queens NY | Heart Of Love Pet Care',
+    description: 'Gentle, attentive care for senior dogs in Queens, NY. Grooming, boarding, and companionship tailored to older pets. Heart Of Love Pet Care.',
   },
   '/locations/houston-tx': {
-    title: 'HVAC & Refrigeration Houston TX | Tri Refrigeration & HVAC',
-    description: 'Houston TX HVAC and refrigeration services for restaurants, supermarkets & businesses. Serving Downtown, River Oaks, Galleria & surrounding areas. Call (713) 909-7745.',
+    title: 'Dog Grooming & Boarding Astoria NY | Heart Of Love Pet Care',
+    description: 'Dog grooming and boarding serving Astoria, NY. Expert pet care close to home from the trusted team at Heart Of Love Pet Care in Queens.',
   },
   '/locations/katy-tx': {
-    title: 'HVAC & Refrigeration Katy TX | Tri Refrigeration & HVAC',
-    description: 'Katy TX HVAC and refrigeration repair & installation. Serving Cinco Ranch, Cross Creek Ranch, Kelliwood & beyond. Call (713) 909-7745.',
+    title: 'Dog Grooming & Boarding Flushing NY | Heart Of Love Pet Care',
+    description: 'Dog grooming and boarding serving Flushing, NY. Expert pet care from Heart Of Love Pet Care — Queens\' most trusted owner-operated salon.',
   },
   '/locations/pearland-tx': {
-    title: 'HVAC & Refrigeration Pearland TX | Tri Refrigeration & HVAC',
-    description: 'Pearland TX HVAC and refrigeration services for commercial and residential clients. Fast, reliable, fully insured. Call (713) 909-7745.',
+    title: 'Dog Grooming & Boarding Long Island City NY | Heart Of Love Pet Care',
+    description: 'Dog grooming and boarding serving Long Island City, NY. Personalized pet care from the team at Heart Of Love Pet Care in Queens.',
   },
   '/locations/sugar-land-tx': {
-    title: 'HVAC & Refrigeration Sugar Land TX | Tri Refrigeration & HVAC',
-    description: 'Sugar Land TX HVAC and refrigeration repair & maintenance. Experienced, fully insured technicians. Call (713) 909-7745.',
+    title: 'Dog Grooming & Boarding Sunnyside NY | Heart Of Love Pet Care',
+    description: 'Dog grooming and boarding serving Sunnyside, NY. Book with Heart Of Love Pet Care — Queens\' owner-operated pet care specialists.',
   },
   '/locations/the-woodlands-tx': {
-    title: 'HVAC & Refrigeration The Woodlands TX | Tri Refrigeration & HVAC',
-    description: 'The Woodlands TX HVAC and refrigeration services. Commercial and residential. Overtime available. Call (713) 909-7745.',
+    title: 'Dog Grooming & Boarding Jackson Heights NY | Heart Of Love Pet Care',
+    description: 'Dog grooming and boarding serving Jackson Heights, NY. Expert, compassionate care from Heart Of Love Pet Care in Queens.',
   },
   '/gallery': {
-    title: 'Gallery | Tri Refrigeration & HVAC Houston TX',
-    description: 'See our work — commercial refrigeration installs, HVAC systems, walk-in coolers & restaurant equipment across Houston TX.',
+    title: 'Gallery | Heart Of Love Pet Care Queens NY',
+    description: 'See our work — happy dogs after grooming sessions, boarding stays, and training milestones at Heart Of Love Pet Care in Queens, NY.',
   },
   '/blog': {
-    title: 'Blog | Tri Refrigeration & HVAC Houston TX',
-    description: 'HVAC and refrigeration tips, maintenance guides & industry news from Tri Refrigeration & HVAC in Houston TX.',
+    title: 'Blog | Heart Of Love Pet Care Queens NY',
+    description: 'Dog grooming tips, training advice, boarding guides & NYC pet care insights from the team at Heart Of Love Pet Care in Queens.',
   },
-  '/blog/why-houston-restaurants-need-specialist': {
-    title: 'Why Houston Restaurants Need A Refrigeration Specialist | Tri Refrigeration & HVAC',
-    description: 'Discover why Houston restaurants and food service businesses need a dedicated commercial refrigeration specialist to protect their operations and bottom line.',
+  '/blog/grooming-guide': {
+    title: 'The Complete Guide To Professional Dog Grooming In Queens NY | Heart Of Love Pet Care',
+    description: 'Looking for expert dog grooming in Queens? Discover how Heart Of Love Pet Care keeps your furry friend clean, healthy, and looking their absolute best.',
   },
-  '/blog/walk-in-cooler-not-holding-temperature': {
-    title: 'Walk-In Cooler Not Holding Temperature? Here\'s What To Do | Tri Refrigeration & HVAC',
-    description: 'Step-by-step guide for Houston food service businesses when a walk-in cooler stops holding temperature. When to call a professional.',
+  '/blog/boarding-team': {
+    title: 'Your Go-To Team For Pet Boarding & Home Boarding In New York | Heart Of Love Pet Care',
+    description: 'Need safe, loving care for your dog while you\'re away? Learn how Heart Of Love Pet Care provides stress-free boarding that feels like home.',
   },
-  '/blog/commercial-hvac-maintenance-houston': {
-    title: 'Commercial HVAC Maintenance: Why Houston Businesses Can\'t Skip It | Tri Refrigeration & HVAC',
-    description: 'Why regular HVAC maintenance is essential for Houston businesses and homeowners. Cost savings, efficiency, and avoiding emergency breakdowns.',
+  '/blog/grooming-health': {
+    title: 'Why Regular Grooming Is Essential For Your Dog\'s Health | Heart Of Love Pet Care',
+    description: 'Regular grooming is about more than looks. Discover how consistent grooming sessions at Heart Of Love Pet Care support your dog\'s overall wellbeing.',
   },
-  '/blog/true-cost-broken-walk-in-freezer': {
-    title: 'The True Cost Of A Broken Walk-In Freezer | Tri Refrigeration & HVAC',
-    description: 'What a walk-in freezer breakdown really costs Houston food service operations — spoilage, downtime, lost revenue, and how to prevent it.',
+  '/blog/training-works': {
+    title: 'From Chaos To Calm: Dog Training That Actually Works | Heart Of Love Pet Care',
+    description: 'Struggling with bad behaviour or a new puppy? Explore how Heart Of Love Pet Care\'s training sessions transform dogs across Queens and NYC.',
   },
-  '/blog/hvac-refrigeration-katy-sugar-land-woodlands': {
-    title: 'HVAC & Refrigeration In Katy, Sugar Land & The Woodlands | Tri Refrigeration & HVAC',
-    description: 'What businesses and homeowners in Katy, Sugar Land & The Woodlands need to know about commercial HVAC and refrigeration services.',
+  '/blog/boarding-vs-kennels': {
+    title: 'Home Boarding vs. Kennels: Which Is Better For Your Dog? | Heart Of Love Pet Care',
+    description: 'Not all boarding is equal. Trust Heart Of Love Pet Care to provide warm, hands-on home boarding so your dog never has to spend a night in a cold kennel.',
   },
-  '/blog/choose-right-commercial-hvac-technician-houston': {
-    title: 'How To Choose The Right HVAC Technician In Houston TX | Tri Refrigeration & HVAC',
-    description: 'Key factors to consider when choosing a commercial HVAC and refrigeration technician in Houston TX. Licensing, experience, and response times.',
+  '/blog/potty-training': {
+    title: 'How To Potty Train Your Dog: Tips From The Pros | Heart Of Love Pet Care',
+    description: 'Potty training doesn\'t have to be a nightmare. Discover proven techniques from the Heart Of Love Pet Care team to help your dog learn fast and stress-free.',
   },
   '/contact': {
-    title: 'Contact Us | Tri Refrigeration & HVAC Houston TX',
-    description: 'Contact Tri Refrigeration & HVAC in Houston TX. Call (713) 909-7745 or send a message for fast, professional HVAC and refrigeration service.',
+    title: 'Contact Us | Heart Of Love Pet Care Queens NY',
+    description: 'Contact Heart Of Love Pet Care in Queens, NY. Book a grooming session, boarding stay, or training consultation. We\'d love to meet your dog.',
   },
   '/review': {
-    title: 'Leave A Review | Tri Refrigeration & HVAC',
-    description: 'Enjoyed our service? Leave a review for Tri Refrigeration & HVAC and help other Houston businesses find reliable HVAC and refrigeration repair.',
+    title: 'Leave A Review | Heart Of Love Pet Care',
+    description: 'Enjoyed our service? Leave a review for Heart Of Love Pet Care and help other Queens pet parents find trusted, loving care for their dogs.',
   },
   '/discount': {
-    title: '10% Discount Offer | Tri Refrigeration & HVAC Houston TX',
-    description: 'Claim your 10% discount on HVAC and refrigeration services in Houston TX. Contact Tri Refrigeration & HVAC today.',
+    title: 'Special Offer | Heart Of Love Pet Care Queens NY',
+    description: 'Claim your special discount on dog grooming, boarding, or training services in Queens, NY. Contact Heart Of Love Pet Care today.',
   },
   '/client-submit': {
-    title: 'Client Submission | Tri Refrigeration & HVAC',
-    description: 'Submit your service request to Tri Refrigeration & HVAC in Houston TX.',
+    title: 'Client Submission | Heart Of Love Pet Care',
+    description: 'Submit your details to Heart Of Love Pet Care in Queens, NY.',
   },
   '/thank-you': {
-    title: 'Thank You | Tri Refrigeration & HVAC',
-    description: 'Thank you for contacting Tri Refrigeration & HVAC. We\'ll be in touch shortly.',
+    title: 'Thank You | Heart Of Love Pet Care',
+    description: 'Thank you for contacting Heart Of Love Pet Care. We\'ll be in touch shortly.',
   },
   '/privacy-policy': {
-    title: 'Privacy Policy | Tri Refrigeration & HVAC',
-    description: 'Privacy policy for Tri Refrigeration & HVAC in Houston TX.',
+    title: 'Privacy Policy | Heart Of Love Pet Care',
+    description: 'Privacy policy for Heart Of Love Pet Care in Queens, NY.',
   },
   '/terms': {
-    title: 'Terms & Conditions | Tri Refrigeration & HVAC',
-    description: 'Terms and conditions for Tri Refrigeration & HVAC in Houston TX.',
+    title: 'Terms & Conditions | Heart Of Love Pet Care',
+    description: 'Terms and conditions for Heart Of Love Pet Care in Queens, NY.',
   },
 }
 
 const DEFAULT_META = {
-  title: 'Tri Refrigeration & HVAC | Houston, TX',
-  description: 'Expert commercial & residential HVAC, refrigeration, walk-in coolers, and restaurant equipment repair in Houston, TX. Call (713) 909-7745.',
+  title: 'Heart Of Love Pet Care | Dog Grooming, Boarding & Training in Queens, NY',
+  description: 'Expert dog grooming, home boarding, and training in Queens, NY. Owner-operated pet care that treats every dog like family.',
 }
 
 const routes = Object.keys(routesMeta)

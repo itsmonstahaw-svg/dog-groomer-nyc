@@ -51,12 +51,12 @@ function App() {
 
       {/* Blog */}
       <Route path="/blog" element={<Blog />} />
-      <Route path="/blog/why-houston-restaurants-need-specialist" element={<BlogPost1 />} />
-      <Route path="/blog/walk-in-cooler-not-holding-temperature" element={<BlogPost2 />} />
-      <Route path="/blog/commercial-hvac-maintenance-houston" element={<BlogPost3 />} />
-      <Route path="/blog/true-cost-broken-walk-in-freezer" element={<BlogPost4 />} />
-      <Route path="/blog/hvac-refrigeration-katy-sugar-land-woodlands" element={<BlogPost5 />} />
-      <Route path="/blog/choose-right-commercial-hvac-technician-houston" element={<BlogPost6 />} />
+      <Route path="/blog/grooming-guide" element={<BlogPost1 />} />
+      <Route path="/blog/boarding-team" element={<BlogPost2 />} />
+      <Route path="/blog/grooming-health" element={<BlogPost3 />} />
+      <Route path="/blog/training-works" element={<BlogPost4 />} />
+      <Route path="/blog/boarding-vs-kennels" element={<BlogPost5 />} />
+      <Route path="/blog/potty-training" element={<BlogPost6 />} />
 
       {/* Other */}
       <Route path="/gallery" element={<Gallery />} />
