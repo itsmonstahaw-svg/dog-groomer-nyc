@@ -15,49 +15,45 @@ const routesMeta = {
     title: 'Heart Of Love Pet Care | Dog Grooming, Boarding & Training in Queens, NY',
     description: 'Expert dog grooming, home boarding, and training in Queens, NY. Small, owner-operated pet care that treats every dog like family. Book your appointment today.',
   },
-  '/services/commercial-refrigeration': {
+  '/services/pet-grooming': {
     title: 'Dog Grooming Queens NY | Heart Of Love Pet Care',
     description: 'Professional dog grooming in Queens, NY. Breed-specific cuts, baths, nail trims & more. Owner-operated salon treating every dog like family.',
   },
-  '/services/hvac-air-conditioning': {
+  '/services/pet-boarding': {
     title: 'Pet Boarding Queens NY | Heart Of Love Pet Care',
     description: 'Safe, loving home boarding for dogs in Queens, NY. No cages — just a warm home environment. Book your dog\'s stay with Heart Of Love Pet Care.',
   },
-  '/services/ice-machine-ems': {
-    title: 'Dog Training Queens NY | Heart Of Love Pet Care',
-    description: 'Positive reinforcement dog training in Queens, NY. From puppy basics to behaviour modification. Personalized sessions with Heart Of Love Pet Care.',
+  '/services/home-boarding': {
+    title: 'Home Boarding Queens NY | Heart Of Love Pet Care',
+    description: 'Your dog stays in a real home, not a cage. One-on-one attention and photo updates while you\'re away. Heart Of Love Pet Care in Queens, NY.',
   },
-  '/services/residential-refrigeration': {
+  '/services/dog-walking': {
     title: 'Dog Walking Queens NY | Heart Of Love Pet Care',
     description: 'Reliable dog walking services in Queens, NY. Experienced, caring walkers who treat your dog like family. Book with Heart Of Love Pet Care.',
   },
-  '/services/restaurant-equipment': {
-    title: 'Puppy Care Queens NY | Heart Of Love Pet Care',
-    description: 'Specialised puppy care, socialisation, and training in Queens, NY. Give your new pup the best start with Heart Of Love Pet Care.',
+  '/services/training-behaviour': {
+    title: 'Dog Training Queens NY | Heart Of Love Pet Care',
+    description: 'Positive reinforcement dog training in Queens, NY. From puppy basics to behaviour modification. Personalized sessions with Heart Of Love Pet Care.',
   },
-  '/services/walk-in-coolers': {
-    title: 'Senior Dog Care Queens NY | Heart Of Love Pet Care',
-    description: 'Gentle, attentive care for senior dogs in Queens, NY. Grooming, boarding, and companionship tailored to older pets. Heart Of Love Pet Care.',
+  '/services/potty-training': {
+    title: 'Potty Training Queens NY | Heart Of Love Pet Care',
+    description: 'Structured potty training programs for puppies and adult dogs in Queens, NY. Science-based routines that work. Heart Of Love Pet Care.',
   },
-  '/locations/houston-tx': {
-    title: 'Dog Grooming & Boarding Astoria NY | Heart Of Love Pet Care',
-    description: 'Dog grooming and boarding serving Astoria, NY. Expert pet care close to home from the trusted team at Heart Of Love Pet Care in Queens.',
+  '/service-areas/queens-ny': {
+    title: 'Dog Grooming & Boarding Queens NY | Heart Of Love Pet Care',
+    description: 'Dog grooming and boarding in Queens, NY. Expert pet care from the trusted team at Heart Of Love Pet Care.',
   },
-  '/locations/katy-tx': {
-    title: 'Dog Grooming & Boarding Flushing NY | Heart Of Love Pet Care',
-    description: 'Dog grooming and boarding serving Flushing, NY. Expert pet care from Heart Of Love Pet Care — Queens\' most trusted owner-operated salon.',
+  '/service-areas/brooklyn-ny': {
+    title: 'Dog Grooming & Boarding Brooklyn NY | Heart Of Love Pet Care',
+    description: 'Dog grooming and boarding serving Brooklyn, NY. Expert pet care from Heart Of Love Pet Care — Queens\' most trusted owner-operated salon.',
   },
-  '/locations/pearland-tx': {
-    title: 'Dog Grooming & Boarding Long Island City NY | Heart Of Love Pet Care',
-    description: 'Dog grooming and boarding serving Long Island City, NY. Personalized pet care from the team at Heart Of Love Pet Care in Queens.',
+  '/service-areas/manhattan-ny': {
+    title: 'Dog Grooming & Boarding Manhattan NY | Heart Of Love Pet Care',
+    description: 'Dog grooming and boarding serving Manhattan, NY. Personalized pet care from the team at Heart Of Love Pet Care in Queens.',
   },
-  '/locations/sugar-land-tx': {
-    title: 'Dog Grooming & Boarding Sunnyside NY | Heart Of Love Pet Care',
-    description: 'Dog grooming and boarding serving Sunnyside, NY. Book with Heart Of Love Pet Care — Queens\' owner-operated pet care specialists.',
-  },
-  '/locations/the-woodlands-tx': {
-    title: 'Dog Grooming & Boarding Jackson Heights NY | Heart Of Love Pet Care',
-    description: 'Dog grooming and boarding serving Jackson Heights, NY. Expert, compassionate care from Heart Of Love Pet Care in Queens.',
+  '/service-areas/new-york': {
+    title: 'Dog Grooming & Boarding New York NY | Heart Of Love Pet Care',
+    description: 'Dog grooming and boarding serving New York City. Book with Heart Of Love Pet Care — Queens\' owner-operated pet care specialists.',
   },
   '/gallery': {
     title: 'Gallery | Heart Of Love Pet Care Queens NY',
