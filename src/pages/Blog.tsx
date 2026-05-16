@@ -56,8 +56,7 @@ const Blog = () => {
         <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              ‘url("https://vibe.filesafe.space/1777030353190232844/attachments/b368c911-7f25-4632-acad-64db52f092c2.png")’,
+            backgroundImage: `url("https://vibe.filesafe.space/1777030353190232844/attachments/b368c911-7f25-4632-acad-64db52f092c2.png")`,
           }}
         >
           <div className="absolute inset-0 bg-black/60" />
