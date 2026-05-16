@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, ChevronDown } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { useState, useEffect } from "react";
 import { QuoteForm } from "./QuoteForm";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isQuoteOpen, setIsQuoteOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -107,29 +107,9 @@ export const Navbar = () => {
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button variant="default" className="font-bold uppercase tracking-wider bg-primary text-primary-foreground hover:bg-primary/90 px-6">
-                Custom Orders
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="bg-black border border-white/10 p-6 sm:p-8 rounded-lg shadow-2xl max-w-md w-[95vw] sm:w-full [&>button]:text-white [&>button]:opacity-100 [&>button:hover]:opacity-80">
-              <div className="flex justify-center mb-0">
-                <img 
-                  src="https://vibe.filesafe.space/1777030353190232844/attachments/c896108d-a195-4a99-9db4-723af21b2087.png" 
-                  alt="NYC Hearts of Love Pet Care" 
-                  className="h-32 w-auto object-contain"
-                />
-              </div>
-              <DialogTitle className="text-3xl font-black uppercase text-center text-white mb-2 tracking-tight">
-                Get A Free Quote
-              </DialogTitle>
-              <DialogDescription className="text-center text-gray-400 mb-6">
-                Fill out the form below and we'll get back to you shortly.
-              </DialogDescription>
-              <QuoteForm />
-            </DialogContent>
-          </Dialog>
+          <Button variant="default" className="font-bold uppercase tracking-wider bg-primary text-primary-foreground hover:bg-primary/90 px-6" onClick={() => setIsQuoteOpen(true)}>
+            Get Free Quote
+          </Button>
           <Button variant="outline" className="font-bold border-primary bg-white text-primary hover:bg-white/90 hover:text-primary flex items-center gap-2 px-6" asChild>
             <a href="tel:+16469259123">
               <Phone className="h-4 w-4" />
@@ -140,29 +120,9 @@ export const Navbar = () => {
 
         {/* Mobile Nav Top Row */}
         <div className="flex lg:hidden w-full items-center justify-between gap-2">
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button variant="default" className="flex-1 font-bold uppercase tracking-wider bg-primary text-primary-foreground hover:bg-primary/90 text-[10px] sm:text-xs px-2 h-10">
-                Custom Orders
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="bg-black border border-white/10 p-6 sm:p-8 rounded-lg shadow-2xl max-w-md w-[95vw] sm:w-full [&>button]:text-white [&>button]:opacity-100 [&>button:hover]:opacity-80 z-[100]">
-              <div className="flex justify-center mb-0">
-                <img 
-                  src="https://vibe.filesafe.space/1777030353190232844/attachments/c896108d-a195-4a99-9db4-723af21b2087.png" 
-                  alt="NYC Hearts of Love Pet Care" 
-                  className="h-32 w-auto object-contain"
-                />
-              </div>
-              <DialogTitle className="text-3xl font-black uppercase text-center text-white mb-2 tracking-tight">
-                Get A Free Quote
-              </DialogTitle>
-              <DialogDescription className="text-center text-gray-400 mb-6">
-                Fill out the form below and we'll get back to you shortly.
-              </DialogDescription>
-              <QuoteForm />
-            </DialogContent>
-          </Dialog>
+          <Button variant="default" className="flex-1 font-bold uppercase tracking-wider bg-primary text-primary-foreground hover:bg-primary/90 text-[10px] sm:text-xs px-2 h-10" onClick={() => setIsQuoteOpen(true)}>
+            Get Free Quote
+          </Button>
           
           <Button variant="outline" className="flex-1 font-bold border-primary bg-white text-primary hover:bg-white/90 hover:text-primary flex items-center justify-center gap-1.5 text-[10px] sm:text-xs px-2 h-10" asChild>
             <a href="tel:+16469259123">
@@ -213,5 +173,33 @@ export const Navbar = () => {
         </div>
       </div>
     </header>
+
+    {isQuoteOpen && (
+      <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
+        <div className="absolute inset-0 bg-black/60" onClick={() => setIsQuoteOpen(false)} />
+        <div className="relative bg-black border border-white/10 p-6 sm:p-8 rounded-lg shadow-2xl max-w-md w-full">
+          <button
+            onClick={() => setIsQuoteOpen(false)}
+            className="absolute top-4 right-4 text-white opacity-70 hover:opacity-100 text-xl leading-none"
+          >
+            ✕
+          </button>
+          <div className="flex justify-center mb-0">
+            <img
+              src="https://vibe.filesafe.space/1777030353190232844/attachments/c896108d-a195-4a99-9db4-723af21b2087.png"
+              alt="NYC Hearts of Love Pet Care"
+              className="h-32 w-auto object-contain"
+            />
+          </div>
+          <h2 className="text-3xl font-black uppercase text-center text-white mt-4 mb-2 tracking-tight">
+            Get A Free Quote
+          </h2>
+          <p className="text-center text-gray-400 mb-6 text-sm">
+            Fill out the form below and we'll get back to you shortly.
+          </p>
+          <QuoteForm />
+        </div>
+      </div>
+    )}
   );
 };
