@@ -1,6 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import BlogPost1 from "./pages/BlogPost1";
+import BlogPost2 from "./pages/BlogPost2";
+import BlogPost3 from "./pages/BlogPost3";
+import BlogPost4 from "./pages/BlogPost4";
+import BlogPost5 from "./pages/BlogPost5";
+import BlogPost6 from "./pages/BlogPost6";
 import ServicePetGrooming from "./pages/ServicePetGrooming";
 import ServicePetBoarding from "./pages/ServicePetBoarding";
 import ServiceHomeBoarding from "./pages/ServiceHomeBoarding";
@@ -33,6 +39,12 @@ const App = () => (
           <Route path="/services/potty-training" element={<ServicePottyTraining />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/grooming-guide" element={<BlogPost1 />} />
+          <Route path="/blog/boarding-team" element={<BlogPost2 />} />
+          <Route path="/blog/grooming-health" element={<BlogPost3 />} />
+          <Route path="/blog/training-works" element={<BlogPost4 />} />
+          <Route path="/blog/boarding-vs-kennels" element={<BlogPost5 />} />
+          <Route path="/blog/potty-training" element={<BlogPost6 />} />
           <Route path="/service-areas/queens-ny" element={<ServiceAreaQueens />} />
           <Route path="/service-areas/brooklyn-ny" element={<ServiceAreaBrooklyn />} />
           <Route path="/service-areas/manhattan-ny" element={<ServiceAreaManhattan />} />
