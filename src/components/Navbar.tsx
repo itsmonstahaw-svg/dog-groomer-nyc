@@ -50,7 +50,8 @@ export const Navbar = () => {
   const initials = "HOL";
 
   return (
-    <header 
+    <>
+    <header
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
         isScrolled 
           ? "bg-background shadow-sm border-b border-primary" 
@@ -201,5 +202,6 @@ export const Navbar = () => {
         </div>
       </div>
     )}
+    </>
   );
 };
