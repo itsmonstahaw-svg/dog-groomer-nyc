@@ -21,8 +21,6 @@ export const FloatingQuoteButton = () => {
 
   return (
     <>
-      <div data-chat-widget data-widget-id="69ac39e703fc831334516ff9" data-location-id="scriNzyBzNzN4FtsjgfR"></div>
-
       <div
         className={`fixed bottom-[20px] right-[90px] z-40 transition-all duration-300 transform ${
           isVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0 pointer-events-none"
