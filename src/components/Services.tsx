@@ -1,108 +1,65 @@
-import { ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { ArrowRight, Phone } from "lucide-react";
+import { ServiceCards } from "./ServiceCards";
+import { QuoteModal } from "./QuoteModal";
+import { SITE } from "@/lib/site";
 
+// Home page "Our Services": header with "View all services", the six service cards, then a help strip.
 export const Services = () => {
-  const services = [
-    {
-      title: "Pet Boarding",
-      description: "Safe, comfortable, and loving overnight care for your dog.",
-      image: "https://vibe.filesafe.space/1777030353190232844/attachments/6ba8b6a0-6652-4d25-b961-c0c67821094e.png",
-      href: "/services/pet-boarding"
-    },
-    {
-      title: "Home Boarding",
-      description: "A warm, cage-free alternative where your dog stays in a real home environment.",
-      image: "https://vibe.filesafe.space/1777030353190232844/attachments/a713a282-c829-4085-82ee-462908fb06db.png",
-      href: "/services/home-boarding"
-    },
-    {
-      title: "Training & Behaviour",
-      description: "Transform your dog's behaviour with positive, effective training techniques.",
-      image: "https://vibe.filesafe.space/1777030353190232844/attachments/6aa68264-0b19-44e1-9154-970889948d40.png",
-      href: "/services/training-behaviour"
-    },
-    {
-      title: "Potty Training",
-      description: "Expert guidance to help your puppy or dog build good habits from day one.",
-      image: "https://vibe.filesafe.space/1777030353190232844/attachments/5bd2bd1b-1de7-434f-9f69-bb7072958d57.png",
-      href: "/services/potty-training"
-    },
-    {
-      title: "Dog Walking",
-      description: "Reliable, energetic, and fun walks to keep your dog active and socialized.",
-      image: "https://vibe.filesafe.space/1777030353190232844/attachments/1c47de67-7ab2-4498-ba25-e7752390d866.png",
-      href: "/services/dog-walking"
-    },
-    {
-      title: "Pet Grooming",
-      description: "Professional grooming tailored to your dog's breed, coat, and personality.",
-      image: "https://vibe.filesafe.space/1777030353190232844/attachments/528d0771-000a-47af-8c5a-7c8d42ae1d16.png",
-      href: "/services/pet-grooming"
-    }
-  ];
+  const [isQuoteOpen, setIsQuoteOpen] = useState(false);
 
   return (
-    <section id="services" className="py-12 bg-card border-b border-border/40">
-      <div className="w-full max-w-[1200px] mx-auto px-[12px]">
-        <div className="text-center mb-12 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter">
-            Our Services
-          </h2>
-          <div className="w-24 h-1 bg-primary mx-auto mt-6"></div>
+    <section id="services" className="py-16 md:py-24 border-b border-border/40 bg-white">
+      <div className="w-full max-w-[960px] mx-auto px-[12px]">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+          <div className="max-w-2xl">
+            <p className="text-primary text-[11px] font-black uppercase tracking-[0.2em]">Our services</p>
+            <h2 className="mt-3 text-3xl md:text-4xl font-black tracking-tight leading-tight text-black">
+              Dog Grooming, Boarding &amp; Training <span className="text-primary">in Queens, NY</span>
+            </h2>
+            <div className="w-16 h-1 bg-primary mt-5"></div>
+            <p className="mt-5 text-[15px] text-zinc-600 leading-[1.8]">
+              From a fresh groom to overnight stays and training, every dog gets the same gentle, owner-operated care we'd give our own.
+            </p>
+          </div>
+          <a
+            href="/services"
+            className="inline-flex items-center justify-center gap-2 self-start md:self-auto shrink-0 rounded-md border border-gray-200 bg-white px-5 h-11 text-sm font-bold text-black hover:border-primary hover:text-primary transition-colors"
+          >
+            View all services <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
 
-        <motion.div 
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-[2px] bg-black border-[2px] border-black"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={{
-            hidden: {},
-            visible: {
-              transition: {
-                staggerChildren: 0.1
-              }
-            }
-          }}
-        >
-          {services.map((service, index) => (
-            <motion.a 
-              key={index} 
-              href={service.href}
-              variants={{
-                hidden: { opacity: 0, y: 40 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
-              }}
-              className="group relative block overflow-hidden aspect-square sm:aspect-[4/3] lg:aspect-[4/3] bg-black"
+        <div className="mt-12">
+          <ServiceCards />
+        </div>
+
+        {/* Help strip */}
+        <div className="mt-10 rounded-2xl px-6 py-6 md:px-8 flex flex-col md:flex-row md:items-center justify-between gap-5" style={{ backgroundColor: "#050b1f" }}>
+          <div>
+            <p className="text-lg font-black text-white">Not sure which service your dog needs?</p>
+            <p className="mt-1 text-sm text-gray-400">Tell us about your dog and we'll point you to the right fit.</p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+            <button
+              type="button"
+              onClick={() => setIsQuoteOpen(true)}
+              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-md h-11 px-6 transition-colors"
             >
-              <img 
-                src={service.image} 
-                alt={service.title} 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-30"
-              />
-              
-              {/* Overlay Description */}
-              <div className="absolute inset-0 flex flex-col justify-center p-8 z-10 pointer-events-none">
-                <div className="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75">
-                  <p className="text-white text-lg font-medium leading-relaxed text-center drop-shadow-md">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
-              
-              {/* Title Badge */}
-              <div className="absolute bottom-6 left-6 z-20 transition-transform duration-500 group-hover:-translate-y-2">
-                <div className="bg-black text-white px-4 py-2.5 text-sm sm:text-base font-black uppercase tracking-wide flex items-center gap-2 shadow-xl rounded-sm">
-                  {service.title}
-                  <div className="bg-primary text-primary-foreground rounded-full p-0.5 ml-1">
-                    <ArrowRight className="w-4 h-4" />
-                  </div>
-                </div>
-              </div>
-            </motion.a>
-          ))}
-        </motion.div>
+              Get A Free Quote
+            </button>
+            <a
+              href={SITE.phoneHref}
+              className="inline-flex items-center justify-center gap-2 border border-white/30 hover:bg-white/10 text-white font-bold rounded-md h-11 px-6 transition-colors"
+            >
+              <Phone className="w-4 h-4" />
+              {SITE.phone}
+            </a>
+          </div>
+        </div>
       </div>
+
+      <QuoteModal open={isQuoteOpen} onClose={() => setIsQuoteOpen(false)} />
     </section>
   );
 };

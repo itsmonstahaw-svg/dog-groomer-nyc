@@ -35,3 +35,6 @@ bun.lockb
 
 # Local Netlify folder
 .netlify
+
+# Original full-size photos (the site uses the optimized copies in public/images/photos)
+public/images/*.png

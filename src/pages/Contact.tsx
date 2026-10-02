@@ -1,136 +1,146 @@
+import { useEffect } from "react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
-import { Reviews } from "@/components/Reviews";
-import { Process } from "@/components/Process";
-import { ServiceAreas } from "@/components/ServiceAreas";
-import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 import { FloatingQuoteButton } from "@/components/FloatingQuoteButton";
-import { QuoteForm } from "@/components/QuoteForm";
-import { Button } from "@/components/ui/button";
+import { QuoteFormPanel } from "@/components/QuoteFormPanel";
+import { ServiceHero } from "@/components/ServiceHero";
+import { HOURS, SITE } from "@/lib/site";
+import { AREAS, areaPath } from "@/data/catalog";
+
+// No response times or scheduling promises beyond what the site already states.
+const steps = [
+  {
+    title: "Send Us Your Request",
+    when: "Right now",
+    text: "Fill out the form with your name, phone number and a short note about your dog and the service you need.",
+  },
+  {
+    title: "We Reach Out",
+    when: "Once we have your request",
+    text: "We'll get back to you to talk through your dog's needs and answer any questions.",
+  },
+  {
+    title: "We Book Your Visit",
+    when: "At a time that works for you",
+    text: "We confirm a time for grooming, boarding, walking or training that fits your schedule.",
+  },
+  {
+    title: "Your Dog Is Treated Like Family",
+    when: "Every visit",
+    text: "Gentle, patient, owner-operated care, and our direct line for any questions.",
+  },
+];
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const details = [
+    { icon: Phone, label: "Phone", value: SITE.phone, href: SITE.phoneHref, note: "Best way to reach us. You talk to the owner directly." },
+    { icon: Mail, label: "Email", value: SITE.email, href: `mailto:${SITE.email}`, note: "Write to us and we'll get back to you." },
+    { icon: MapPin, label: "Location", value: SITE.address, href: "", note: "Serving Queens, Brooklyn, Manhattan and beyond" },
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col font-sans">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage:
-              'url("https://vibe.filesafe.space/1777030353190232844/attachments/b368c911-7f25-4632-acad-64db52f092c2.png")',
-          }}
-        >
-          <div className="absolute inset-0 bg-black/60" />
-        </div>
+      <main className="flex-grow">
+        <ServiceHero
+          crumbs={[
+            { name: "Home", href: "/" },
+            { name: "Contact", href: "/contact" },
+          ]}
+          eyebrow="Get in Touch"
+          title="Get a Free Quote"
+          sub="Tell us about your dog and the service you need. We serve Queens, Brooklyn, Manhattan and pet owners across New York, and you deal directly with the owner."
+          image={SITE.heroImage}
+          noButtons
+        />
 
-        {/* Bottom wave */}
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-            className="relative block w-full h-[80px] md:h-[120px]"
-          >
-            <path
-              d="M0 120 L0 60 C 150 -20 250 140 450 70 C 650 0 750 120 900 80 C 1050 40 1150 20 1200 50 L 1200 120 Z"
-              className="fill-background"
-            />
-          </svg>
-        </div>
+        <section className="py-14 md:py-16 bg-white text-black">
+          <div className="w-full max-w-[960px] mx-auto px-[12px] grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+            {/* Left: how to reach us */}
+            <div>
+              <h2 className="text-2xl font-black tracking-tight">How to Reach Us</h2>
 
-        <div className="relative z-20 flex flex-col items-center text-center px-4 max-w-4xl">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight text-white [text-shadow:_0_2px_12px_rgba(0,0,0,0.5)] mb-4">
-            CONTACT US
-          </h1>
-          <p className="text-lg md:text-xl text-white font-bold mb-8 [text-shadow:_0_1px_4px_rgba(0,0,0,0.5)] max-w-2xl mx-auto">
-            Get in touch with any questions or comments and we'll be happy to help.
-          </p>
-          {/* Three downward arrows */}
-          <div className="flex items-center gap-2 mt-4">
-            {[0, 1, 2].map((i) => (
-              <svg
-                key={i}
-                width="52"
-                height="68"
-                viewBox="0 0 52 68"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="opacity-90"
-              >
-                <path
-                  d="M26 4 L26 56 M10 40 L26 58 L42 40"
-                  stroke="white"
-                  strokeWidth="6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            ))}
-          </div>
-        </div>
-      </section>
+              <ul className="mt-6 space-y-5">
+                {details.map(({ icon: Icon, label, value, href, note }) => (
+                  <li key={label} className="flex items-start gap-4">
+                    <span className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                      <Icon className="w-5 h-5 text-primary" />
+                    </span>
+                    <div>
+                      <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">{label}</p>
+                      {href ? (
+                        <a href={href} className="text-[15px] font-bold text-black hover:text-primary transition-colors break-all">{value}</a>
+                      ) : (
+                        <p className="text-[15px] font-bold text-black">{value}</p>
+                      )}
+                      <p className="text-xs text-zinc-500 mt-0.5">{note}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
 
-      {/* Contact Section */}
-      <section className="py-16 md:py-24 bg-white text-black">
-        <div className="w-full max-w-[1200px] mx-auto px-[12px]">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
-            
-            {/* Left side */}
-            <div className="flex flex-col gap-6">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-[1.1]">
-                CONTACT US FOR A FREE QUOTE
-              </h2>
-              <p className="text-lg text-gray-600 mb-4">
-                Contact us by filling in the form or by using any of the methods below and we'll get back to you within 24 hours
-              </p>
-              
-              <div className="flex flex-col gap-4 w-full max-w-md">
-                <Button 
-                  asChild 
-                  className="w-full h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-black text-lg uppercase tracking-wider rounded-sm"
-                >
-                  <a href="mailto:HEARTOFLOVEPETCARE@GMAIL.COM">
-                    EMAIL: HEARTOFLOVEPETCARE@GMAIL.COM
-                  </a>
-                </Button>
-                <Button 
-                  asChild 
-                  className="w-full h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-black text-lg uppercase tracking-wider rounded-sm"
-                >
-                  <a href="tel:+16469259123">
-                    PHONE: (646) 925-9123
-                  </a>
-                </Button>
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">Business hours</p>
+                <ul className="mt-4 space-y-2">
+                  {HOURS.map((h) => (
+                    <li key={h.day} className="flex items-center justify-between text-sm text-zinc-600">
+                      <span>{h.day}</span>
+                      <span className="font-medium text-zinc-800">{h.time}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">Areas we serve</p>
+                <ul className="mt-4 flex flex-wrap gap-1.5">
+                  {AREAS.map((a) => (
+                    <li key={a.slug}>
+                      <a
+                        href={areaPath(a)}
+                        className="inline-flex items-center rounded-full border border-gray-200 bg-white px-2.5 py-1.5 text-xs whitespace-nowrap text-zinc-600 hover:bg-primary hover:text-white hover:border-primary transition-colors"
+                      >
+                        {a.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 
-            {/* Right side */}
-            <div className="bg-black p-6 md:p-8 rounded-lg shadow-2xl border border-white/10 max-w-md mx-auto w-full">
-              <div className="flex justify-center -mb-2">
-                <img 
-                  src="https://vibe.filesafe.space/1777030353190232844/attachments/c896108d-a195-4a99-9db4-723af21b2087.png" 
-                  alt="NYC Hearts of Love Pet Care" 
-                  className="h-32 w-auto object-contain"
-                />
-              </div>
-              <h3 className="text-2xl md:text-3xl font-black uppercase text-white mt-0 mb-6 text-center tracking-tight">
-                GET A FREE QUOTE
-              </h3>
-              <QuoteForm />
+            {/* Right: form card */}
+            <div className="bg-black border border-white/10 rounded-lg p-5 shadow-2xl w-full max-w-[420px] mx-auto lg:mx-0 lg:ml-auto">
+              <QuoteFormPanel />
             </div>
-
           </div>
-        </div>
-      </section>
+        </section>
 
-      <main>
-        <Reviews />
-        <Process />
-        <ServiceAreas />
-        <CTA />
+        <section className="py-14 md:py-16 border-t border-gray-200" style={{ backgroundColor: "#F4F6F9" }}>
+          <div className="w-full max-w-[960px] mx-auto px-[12px]">
+            <h2 className="text-3xl md:text-4xl font-black tracking-tight text-black">What Happens After You Submit</h2>
+
+            <ol className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {steps.map((step, i) => (
+                <li key={step.title} className="flex flex-col rounded-3xl border border-gray-200 bg-white p-5 shadow-sm">
+                  <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-primary text-primary-foreground text-base font-black">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="mt-4 text-base font-black text-black leading-snug">{step.title}</h3>
+                  <span className="mt-3 self-start rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-[11px] font-bold text-primary">
+                    {step.when}
+                  </span>
+                  <p className="mt-4 text-sm text-zinc-600 leading-relaxed">{step.text}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
       </main>
 
       <Footer />

@@ -1,108 +1,132 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { MapPin } from "lucide-react";
+import { ArrowRight, MapPin } from "lucide-react";
+import { ServiceFAQ } from "./ServiceFAQ";
+import { SITE } from "@/lib/site";
+import { AREAS, areaPath } from "@/data/catalog";
 
+const faqs: [string, string][] = [
+  [
+    "Do you require vaccination records?",
+    "Yes, for the safety of all pets in our salon, we require proof of current Rabies, Distemper/Parvo, and Bordetella vaccinations before any grooming services.",
+  ],
+  [
+    "How long does a grooming appointment take?",
+    "A typical full groom takes between 2 to 4 hours depending on the breed, size, coat condition, and temperament of your dog. We will give you a call or text when they are ready for pickup.",
+  ],
+  [
+    "Can I stay with my dog during the grooming?",
+    "For safety reasons and to keep the dogs calm, we ask that owners do not stay in the grooming area. Dogs are usually much more cooperative and relaxed when their owners are not present.",
+  ],
+  [
+    "Do you groom large breeds or difficult dogs?",
+    "Yes! We welcome dogs of all sizes and breeds. Please let us know in advance if your dog has any behavioral issues or anxieties so we can schedule appropriate time and staff.",
+  ],
+];
 
-export const FAQAndServiceAreas = () => {
-  const faqs = [
-    {
-      question: "Do you require vaccination records?",
-      answer: "Yes, for the safety of all pets in our salon, we require proof of current Rabies, Distemper/Parvo, and Bordetella vaccinations before any grooming services."
-    },
-    {
-      question: "How long does a grooming appointment take?",
-      answer: "A typical full groom takes between 2 to 4 hours depending on the breed, size, coat condition, and temperament of your dog. We will give you a call or text when they are ready for pickup."
-    },
-    {
-      question: "Can I stay with my dog during the grooming?",
-      answer: "For safety reasons and to keep the dogs calm, we ask that owners do not stay in the grooming area. Dogs are usually much more cooperative and relaxed when their owners are not present."
-    },
-    {
-      question: "Do you groom large breeds or difficult dogs?",
-      answer: "Yes! We welcome dogs of all sizes and breeds. Please let us know in advance if your dog has any behavioral issues or anxieties so we can schedule appropriate time and staff."
-    }
-  ];
+// General FAQ used on the home page and the service-area pages.
+export const FAQ = ({ place }: { place?: string }) => (
+  <ServiceFAQ
+    heading={place ? `${place} Pet Care FAQ` : "Frequently Asked Questions"}
+    sub={`Common questions about dog grooming, boarding and training in ${place ?? "Queens, NY"}.`}
+    faqs={faqs}
+  />
+);
 
-
+// "Where We Work": Queens (home base) as a featured card with the map, other areas as compact cards.
+export const ServiceAreas = () => {
+  const [primary, ...others] = AREAS;
 
   return (
-    <section id="faq-areas" className="py-20 bg-black text-white border-b border-border/40">
-      <div className="w-full max-w-[1200px] mx-auto px-[12px] space-y-24">
-        
-        {/* Top Section: FAQ + Image */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-          {/* FAQ Left */}
-          <div className="flex flex-col justify-start">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-8">
-              Frequently Asked Questions
-            </h2>
-            <Accordion type="single" collapsible className="w-full">
-              {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border-[#849b36]/40 border-b-2">
-                  <AccordionTrigger className="text-left text-lg md:text-xl font-bold hover:text-[#849b36] hover:no-underline transition-colors py-6 flex-row-reverse justify-end gap-4 [&[data-state=open]>svg]:text-[#849b36]">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-gray-400 text-base leading-relaxed pb-6 pl-8">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
+    <section id="areas" className="py-16 md:py-24 border-t border-gray-200" style={{ backgroundColor: "#F4F6F9" }}>
+      <div className="w-full max-w-[960px] mx-auto px-[12px]">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+          <div className="max-w-2xl">
+            <p className="text-primary text-xs font-black uppercase tracking-[0.2em]">Where We Work</p>
+            <h2 className="mt-3 text-3xl md:text-4xl font-black tracking-tight text-black leading-tight">Proudly Serving These Areas</h2>
+            <div className="w-16 h-1 bg-primary mt-5"></div>
+            <p className="mt-5 text-[15px] text-zinc-600 leading-[1.8]">
+              Based in Jamaica, Queens and serving dogs and their families across New York City.
+            </p>
+          </div>
+          <a
+            href="/service-areas"
+            className="inline-flex items-center justify-center gap-2 self-start md:self-auto shrink-0 rounded-md border border-gray-200 bg-white px-5 h-11 text-sm font-bold text-black hover:border-primary hover:text-primary transition-colors"
+          >
+            View all areas <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
+
+        {/* Primary area: navy info panel + map */}
+        <div className="mt-12 rounded-3xl overflow-hidden border border-gray-200 shadow-xl grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] bg-white">
+          <div className="p-7 md:p-9 text-white" style={{ backgroundColor: "#050b1f" }}>
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/15 border border-primary/40 px-3 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-sky-300">
+              <MapPin className="w-3 h-3" /> Home base
+            </span>
+            <h3 className="mt-5 text-3xl font-black tracking-tight">{primary.label}</h3>
+            <p className="mt-3 text-sm text-gray-300 leading-relaxed">
+              Queens is home base for Heart Of Love Pet Care. We're an owner-operated team treating every dog like family,
+              with grooming, boarding, training and dog walking.
+            </p>
+
+            <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.18em] text-gray-400">Neighborhoods we serve</p>
+            <ul className="mt-3 flex flex-wrap gap-1.5">
+              {primary.areas.map((a) => (
+                <li key={a} className="rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-[11px] text-gray-200">
+                  {a}
+                </li>
               ))}
-            </Accordion>
+            </ul>
+
+            <a
+              href={areaPath(primary)}
+              className="mt-8 inline-flex items-center gap-2 rounded-md bg-primary px-5 h-11 text-sm font-bold text-primary-foreground hover:bg-primary/90 transition-colors"
+            >
+              {primary.label} Services <ArrowRight className="w-4 h-4" />
+            </a>
           </div>
-          {/* Image Right */}
-          <div className="relative rounded-lg overflow-hidden h-[400px] lg:h-[450px]">
-            <img 
-              src="https://vibe.filesafe.space/1777030353190232844/attachments/4c20168e-1dfe-4e87-9b61-ff620aec6c7d.png" 
-              alt="Happy dog being held" 
-              className="object-contain w-full h-full absolute inset-0"
-            />
-          </div>
-        </div>
 
-        {/* Bottom Section: Service Areas */}
-        <div className="pt-10 mt-10 border-t border-white/10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Map */}
-            <div className="bg-zinc-950 border border-zinc-800 rounded-lg shadow-2xl aspect-square md:aspect-[4/3] relative overflow-hidden">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.2977755869623!2d-73.7744318845957!3d40.66736207933618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c266a2f32724f7%3A0xc3f8e5f1f9ec33f4!2s166-09%20144th%20Ave%2C%20Jamaica%2C%20NY%2011434!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                className="absolute inset-0"
-              ></iframe>
-            </div>
-
-            {/* Service Areas List */}
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter text-white">
-                  PROUDLY SERVING THESE AREAS
-                </h2>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {[
-                  "Queens, NY",
-                  "Brooklyn, NY",
-                  "Manhattan, NY",
-                  "New York (Statewide)"
-                ].map((area, index) => (
-                  <div key={index} className="flex items-center gap-3 bg-zinc-950 p-4 rounded-lg border border-zinc-800 shadow-sm text-white">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                      <MapPin className="w-5 h-5 text-primary" />
-                    </div>
-                    <span className="font-bold text-lg">{area}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div className="relative min-h-[320px] bg-gray-100">
+            <iframe
+              src={`https://maps.google.com/maps?q=${SITE.mapQuery}&t=&z=12&ie=UTF8&iwloc=&output=embed`}
+              title="Heart Of Love Pet Care location"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="absolute inset-0 w-full h-full"
+            ></iframe>
           </div>
         </div>
 
+        {/* Other areas */}
+        <ul className="mt-5 grid sm:grid-cols-3 gap-4">
+          {others.map((area) => (
+            <li key={area.slug}>
+              <a
+                href={areaPath(area)}
+                className="group flex flex-col h-full rounded-2xl border border-gray-200 bg-white p-5 shadow-sm hover:border-primary/40 hover:shadow-lg hover:-translate-y-0.5 transition-all"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+                    <MapPin className="w-5 h-5" />
+                  </span>
+                  <ArrowRight className="w-4 h-4 text-zinc-300 group-hover:text-primary group-hover:translate-x-0.5 transition-all" />
+                </div>
+                <p className="mt-4 text-base font-black text-black">{area.label}</p>
+                <p className="mt-1 text-xs text-zinc-500 leading-relaxed">
+                  {area.areas.slice(0, 3).join(", ")} and more
+                </p>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
 };
+
+export const FAQAndServiceAreas = () => (
+  <>
+    <FAQ />
+    <ServiceAreas />
+  </>
+);

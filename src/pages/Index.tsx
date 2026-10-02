@@ -2,6 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Services } from "@/components/Services";
+import { ServiceBadges } from "@/components/ServiceBadges";
 import { Process } from "@/components/Process";
 import { Gallery } from "@/components/Gallery";
 import { Reviews } from "@/components/Reviews";
@@ -16,8 +17,9 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
-        <About />
+        <ServiceBadges />
         <Services />
+        <About />
         <Process />
         <Gallery />
         <Reviews />

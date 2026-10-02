@@ -15,6 +15,22 @@ const routesMeta = {
     title: 'Heart Of Love Pet Care | Dog Grooming, Boarding & Training in Queens, NY',
     description: 'Expert dog grooming, home boarding, and training in Queens, NY. Small, owner-operated pet care that treats every dog like family. Book your appointment today.',
   },
+  '/services': {
+    title: 'Dog Grooming, Boarding & Training Services Queens NY | Heart Of Love Pet Care',
+    description: 'Dog grooming, pet boarding, home boarding, dog walking, training and potty training in Queens, NY. Owner-operated pet care that treats every dog like family.',
+  },
+  '/about': {
+    title: 'About Us | Heart Of Love Pet Care Queens NY',
+    description: 'Heart Of Love Pet Care is an owner-operated, family pet care business in Jamaica, Queens. Licensed, fully insured and 100% local.',
+  },
+  '/service-areas': {
+    title: 'Service Areas | Dog Grooming & Boarding Across NYC | Heart Of Love Pet Care',
+    description: 'Dog grooming, boarding, walking and training across Queens, Brooklyn, Manhattan and New York. Based in Jamaica, Queens.',
+  },
+  '/reviews': {
+    title: 'Reviews | Heart Of Love Pet Care Queens NY',
+    description: 'Read what NYC dog owners say about Heart Of Love Pet Care. 5.0 rating on Google.',
+  },
   '/services/pet-grooming': {
     title: 'Dog Grooming Queens NY | Heart Of Love Pet Care',
     description: 'Professional dog grooming in Queens, NY. Breed-specific cuts, baths, nail trims & more. Owner-operated salon treating every dog like family.',
@@ -95,7 +111,7 @@ const routesMeta = {
     title: 'Leave A Review | Heart Of Love Pet Care',
     description: 'Enjoyed our service? Leave a review for Heart Of Love Pet Care and help other Queens pet parents find trusted, loving care for their dogs.',
   },
-  '/discount': {
+  '/get-your-discount': {
     title: 'Special Offer | Heart Of Love Pet Care Queens NY',
     description: 'Claim your special discount on dog grooming, boarding, or training services in Queens, NY. Contact Heart Of Love Pet Care today.',
   },

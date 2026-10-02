@@ -2,7 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Reviews } from "@/components/Reviews";
 import { Process } from "@/components/Process";
-import { ServiceAreas } from "@/components/ServiceAreas";
+import { ServiceAreas } from "@/components/FAQAndServiceAreas";
 import { CTA } from "@/components/CTA";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -10,22 +10,22 @@ import { QuoteForm } from "@/components/QuoteForm";
 
 const Gallery = () => {
   const gridImages = [
-    "https://vibe.filesafe.space/1777030353190232844/attachments/3c584b5d-4a51-41f5-9329-9478309dff52.png",
-    "https://vibe.filesafe.space/1777030353190232844/attachments/c16bce43-a9cf-4496-b801-f97d13c6cf6f.png",
-    "https://vibe.filesafe.space/1777030353190232844/attachments/fec95bf5-97e3-409e-bb6b-fb9ae4d88332.png",
-    "https://vibe.filesafe.space/1777030353190232844/attachments/11eed622-c248-43b3-90cd-22a6a793ff7a.png",
-    "https://vibe.filesafe.space/1777030353190232844/attachments/8ff84408-4ab9-4039-a467-73df907d890f.png",
-    "https://vibe.filesafe.space/1777030353190232844/attachments/494622de-c0b5-40cb-a8f1-5e25fb0a8c3c.png",
-    "https://vibe.filesafe.space/1777030353190232844/attachments/2945c0b4-1ff0-4798-a563-9ccd86920434.png",
-    "https://vibe.filesafe.space/1777030353190232844/attachments/0f446e67-1cf2-4bf7-b5f5-6fdbec831afe.png",
-    "https://vibe.filesafe.space/1777030353190232844/attachments/922e6561-45b7-4671-9430-0c012eba99e2.png",
-    "https://vibe.filesafe.space/1777030353190232844/attachments/1b0dc273-bfbd-41ff-887e-921631f0a656.png",
-    "https://vibe.filesafe.space/1777030353190232844/attachments/c8d426d4-fd41-4902-b01c-983af1ce9137.png",
-    "https://vibe.filesafe.space/1777030353190232844/attachments/d668750a-2ddd-4914-b27b-cdb2254c329f.png",
-    "https://vibe.filesafe.space/1777030353190232844/attachments/5c5de5be-ad2a-4598-b7ed-6084e83162ee.png",
-    "https://vibe.filesafe.space/1777030353190232844/attachments/18fca5e5-280d-450d-a972-f5826c1a1a48.png",
-    "https://vibe.filesafe.space/1777030353190232844/attachments/a6e6fbb8-3f83-470a-9496-f6749dcb17a9.png",
-    "https://vibe.filesafe.space/1777030353190232844/attachments/41fd54f8-09cc-4f02-b5e5-eb13ca24e1bd.png"
+    "/images/photos/619d4f07.webp",
+    "/images/photos/26e570d1.webp",
+    "/images/photos/d47242a4.webp",
+    "/images/photos/1ed3d0f9.webp",
+    "/images/photos/52d90623.webp",
+    "/images/photos/9da25676.webp",
+    "/images/photos/b11dab6d.webp",
+    "/images/photos/b1247b1a.webp",
+    "/images/photos/442e1b22.webp",
+    "/images/photos/cf0e9f6e.webp",
+    "/images/photos/66034426.webp",
+    "/images/photos/0e335a8e.webp",
+    "/images/photos/bb4a3711.webp",
+    "/images/photos/70924e9c.webp",
+    "/images/photos/d1c037c9.webp",
+    "/images/photos/d4a232dc.webp"
   ];
 
   return (
@@ -95,11 +95,11 @@ const Gallery = () => {
           <div className="w-full max-w-[1200px] mx-auto px-4 md:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
               {gridImages.map((src, index) => (
-                <div key={index} className="aspect-[4/3] overflow-hidden rounded-md relative group bg-zinc-900">
+                <div key={index} className="aspect-[3/4] overflow-hidden rounded-md relative group bg-zinc-900">
                   <img 
                     src={src} 
                     alt={`Gallery image ${index + 1}`} 
-                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300"></div>
                 </div>

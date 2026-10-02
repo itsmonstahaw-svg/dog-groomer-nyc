@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { Reviews } from "@/components/Reviews";
 import { Process } from "@/components/Process";
-import { ServiceAreas } from "@/components/ServiceAreas";
+import { ServiceAreas } from "@/components/FAQAndServiceAreas";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 import { FloatingQuoteButton } from "@/components/FloatingQuoteButton";

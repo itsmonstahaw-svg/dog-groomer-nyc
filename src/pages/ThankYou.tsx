@@ -15,7 +15,7 @@ const ThankYou = () => {
         <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img 
-              src="https://vibe.filesafe.space/1777030353190232844/attachments/6fa75095-9ae4-4ef8-85f1-7ed0da3b386d.png" 
+              src="https://vibe.filesafe.space/1777030353190232844/attachments/b368c911-7f25-4632-acad-64db52f092c2.png" 
               alt="Thank you background" 
               className="w-full h-full object-cover"
             />
