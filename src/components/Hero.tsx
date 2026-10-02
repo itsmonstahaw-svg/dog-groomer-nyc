@@ -12,7 +12,7 @@ export const Hero = () => {
   const [videoIndex, setVideoIndex] = useState(0);
 
   return (
-    <section className="relative w-full min-h-[100vh] flex items-center pt-32 pb-12">
+    <section className="relative w-full min-h-[100vh] flex items-center pt-32 lg:pt-40 pb-12">
       {/* Background: looping muted video when SITE.heroVideos is set (poster shows while it loads), otherwise the photo */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat overflow-hidden"

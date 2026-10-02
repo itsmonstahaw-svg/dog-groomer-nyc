@@ -38,7 +38,7 @@ const AboutUs = () => {
       <Navbar />
       <main className="flex-grow">
         {/* Hero */}
-        <section className="relative w-full pt-28 pb-14 md:pb-16 overflow-hidden" style={{ backgroundColor: "#050b1f" }}>
+        <section className="relative w-full pt-28 lg:pt-40 pb-14 md:pb-16 overflow-hidden" style={{ backgroundColor: "#050b1f" }}>
           <div className="w-full max-w-[960px] mx-auto px-[12px] relative z-10 text-white">
             <div className="max-w-2xl">
               <Breadcrumbs

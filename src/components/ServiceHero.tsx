@@ -23,7 +23,7 @@ export const ServiceHero = ({ crumbs, eyebrow, title, sub, image, bullets, aside
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="relative w-full pt-28 pb-14 md:pb-16 overflow-hidden" style={{ backgroundColor: "#050b1f" }}>
+    <section className="relative w-full pt-28 lg:pt-40 pb-14 md:pb-16 overflow-hidden" style={{ backgroundColor: "#050b1f" }}>
       {image && (
         <div className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url("${image}")` }}>
           <div className="absolute inset-0" style={{ backgroundColor: "rgba(5, 11, 31, 0.86)" }}></div>
