@@ -67,8 +67,8 @@ const ThankYou = () => {
                 asChild
                 className="w-full h-16 bg-primary hover:bg-primary/90 text-white font-black text-xl uppercase tracking-wider rounded-none"
               >
-                <a href="tel:+16469259123">
-                  PHONE: (646) 925-9123
+                <a href="tel:+13473353131">
+                  PHONE: (347) 335-3131
                 </a>
               </Button>
             </div>

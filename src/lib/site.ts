@@ -1,8 +1,8 @@
 // Shared business details used across the site.
 export const SITE = {
   name: "Heart Of Love Pet Care",
-  phone: "(512) 931-3866",
-  phoneHref: "tel:+15129313866",
+  phone: "(347) 335-3131",
+  phoneHref: "tel:+13473353131",
   email: "heartoflovepetcare@gmail.com",
   address: "166-09 144th Ave, Jamaica, NY 11434",
   mapQuery: "166-09+144th+Ave,+Jamaica,+NY+11434",
@@ -11,9 +11,8 @@ export const SITE = {
   googleUrl:
     "https://www.google.com/search?q=Heart+Of+Love+pet+care+nyc",
   instagramUrl: "https://www.instagram.com/heartoflovepetcare/",
-  // GoHighLevel webhooks: quote form leads and chat widget messages.
-  ghlWebhook: "https://services.leadconnectorhq.com/hooks/Y7c5c0rspiCyi0b1qaUc/webhook-trigger/jGYlVD5mHVlak6iFYNxI",
-  ghlChatWebhook: "https://services.leadconnectorhq.com/hooks/Y7c5c0rspiCyi0b1qaUc/webhook-trigger/7e467ac2-4fb6-460b-a3e5-445d3962f002",
+  // GoHighLevel webhook for quote form leads. The chat widget is the GHL script in index.html.
+  ghlWebhook: "https://services.leadconnectorhq.com/hooks/kCk0jPqtmsHRZPu3GWpJ/webhook-trigger/eaa82684-4ea3-4f05-aa8a-9b1d48e22c9e",
   reviewSurveyUrl: "https://api.leadconnectorhq.com/widget/survey/bVJmpV7IwCk5H0Trl0UN",
   // Hero background videos (public/videos/). hero.mp4 is 10 Pexels clips (grooming, boarding & play, training),
   // ~2.5s each, merged at 16:9. List several files to play them in order, then repeat. Empty = hero photo only.

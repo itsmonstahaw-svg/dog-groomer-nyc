@@ -1,6 +1,4 @@
-import { ChatWidget } from "./ChatWidget";
-
-// Floating chat bubble shown on every page (same widget as Air Time Mechanical).
-// If a GoHighLevel chat-widget script is ever added to index.html, render null here instead so the two don't clash.
-export const FloatingQuoteButton = () => <ChatWidget />;
+// The floating chat bubble is the GoHighLevel chat widget loaded in index.html, so nothing renders here
+// (keeps the two from clashing).
+export const FloatingQuoteButton = () => null;
 export default FloatingQuoteButton;

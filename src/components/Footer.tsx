@@ -21,7 +21,7 @@ export const Footer = () => {
         <div className="space-y-3">
           <div className="flex items-center gap-3">
             <Phone className="w-4 h-4 text-primary shrink-0" />
-            <a href="tel:+16469259123" className="font-bold hover:text-primary transition-colors">(646) 925-9123</a>
+            <a href="tel:+13473353131" className="font-bold hover:text-primary transition-colors">(347) 335-3131</a>
           </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-primary shrink-0" />

@@ -21,8 +21,8 @@ import { QuoteModal } from "./QuoteModal";
 import { SITE } from "@/lib/site";
 import { AREAS, SERVICES, areaPath, servicePath } from "@/data/catalog";
 
-const NAV_PHONE = "(646) 925-9123";
-const NAV_PHONE_HREF = "tel:+16469259123";
+const NAV_PHONE = "(347) 335-3131";
+const NAV_PHONE_HREF = "tel:+13473353131";
 
 const SERVICE_ICONS: Record<string, LucideIcon> = {
   "pet-grooming": Scissors,
